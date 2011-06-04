@@ -59,7 +59,40 @@ new TWTR.Widget({
   }
 }).render().setList('carnotweat', 'minimalj').start();
 </script></p>    
-
+<p>SE@Twitter
+<script src="http://widgets.twimg.com/j/2/widget.js"></script>
+<script>
+new TWTR.Widget({
+  version: 2,
+  type: 'list',
+  rpp: 100,
+  interval: 6000,
+  title: 'My picks@',
+  subject: 'Stack exchange',
+  width: 1000,
+  height: 800,
+  theme: {
+    shell: {
+      background: '#7d777c',
+      color: '#ffffff'
+    },
+    tweets: {
+      background: '#ffffff',
+      color: '#444444',
+      links: '#0843f5'
+    }
+  },
+  features: {
+    scrollbar: true,
+    loop: false,
+    live: true,
+    hashtags: true,
+    timestamp: true,
+    avatars: true,
+    behavior: 'all'
+  }
+}).render().setList('carnotweat', 'se').start();
+</script></p>
 <p>Bundle</p>
 
 
