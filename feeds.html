@@ -6,16 +6,6 @@
   <title>Sameerg's Blog @ GitHub</title>
 
   <link rel="stylesheet" type="text/css" href="style.css" />
-    <link rel="shortcut icon" href="/favicon.ico"/>
-    <title>HackerStream</title>
-    <link href="/stylesheets/application.css?1307385026" media="screen" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" media="handheld" href="/stylesheets/handheld/application.css"/>
-    <link rel="stylesheet" media="screen and (max-device-width: 801px)" href="/stylesheets/handheld/application.css"/>
-    <script src="/javascripts/jquery.js?1298768833" type="text/javascript"></script>
-<script src="/javascripts/rails.js?1298768833" type="text/javascript"></script>
-<script src="/javascripts/application.js?1307398054" type="text/javascript"></script>
-    <meta name="csrf-param" content="authenticity_token"/>
-<meta name="csrf-token" content="HcAun0TjUqilMfuI/CyLcBlVNDxbeCNt+Spt+VqaeNc="/>
 </head>
 
 <body>
@@ -62,203 +52,9 @@
                 
 <h3><p><iframe src="http://free.timeanddate.com/clock/i2ly9w5q/n771/fn12/fs15/tct/pct/tt0/tw1/tm1/th1/ts1" frameborder="0" width="236" height="20" allowTransparency="true"></iframe></p>
 
-  <body>
-    <div id="pagetop">
-      <div class='right'>
-        <div id='login-links' style='display:none'>
-  <a id='login-link' href='#'>login</a> |
-  <a id='signup-link' href='#'>signup</a>
-</div>
-
-<form id='login-form' style='display:none'>
-  email: <input id='login-input'/>
-  <input id='login-submit' type='submit' value='login'/>
-</form>
-
-<div id='logout-links' style='display:none'>
-  <input id='logout-button' type='submit' value='logout'/>
-  <input id='dontlogout-button' type='submit' value='cancel'/>
-</div>
-
-<script>
-  location.hash = '#pg,tptacek,patio11,edw519,jacquesm,fogus,cwan,jrockway,swombat,icey,raganwald,vaksel,tobylane,jbk,2627817,2628104,2627734,2627602,2628082,2627582,2627074,2626332,2625860,2625605';
-</script>
-
-<a id='login-user' style='display:inline' href='#'>
-
-</a>
-
-<script>
-  $('#login-link').click(function() {
-  $('#login-submit').attr('value', 'login');
-  $('#login-links').fadeOut(
-    function(){$('#login-form').fadeIn(
-      function(){$('#login-input').focus();});});
-  return false;
-});
-
-$('#signup-link').click(function() {
-  $('#login-submit').attr('value', 'signup');
-  $('#login-links').fadeOut(
-    function(){$('#login-form').fadeIn(
-      function(){$('#login-input').focus();});});
-  return false;
-});
-
-$('#login-form').submit(function() {
-  $('#login-form').hide();
-  $.ajax({
-    url: '/login',
-    type: 'post',
-    data: {
-      email: $('#login-input').val(),
-      shortlist: shortlist.join(','),
-    },
-    success: function() {
-      $('#login-user').html($('#login-input').val());
-      $('#login-user').fadeIn();
-      userLoggedIn();
-    },
-    error: function() {
-      $('#login-links').show();
-    }
-  });
-  return false;
-});
-
-$('#login-user').click(function() {
-  $('#login-user').fadeOut(function() {
-    $('#logout-links').fadeIn();});
-  return false;
-});
-
-$('#logout-button').click(function() {
-  $('#logout-links').hide();
-  $.ajax({
-    url: '/login',
-    type: 'delete',
-    success: function() {
-      $('#login-links').fadeIn();
-    },
-    error: function() {
-      $('#login-user').show();
-    },
-  });
-  return false;
-});
-
-$('#dontlogout-button').click(function() {
-  $('#logout-links').fadeOut(function() {
-    $('#login-user').fadeIn();});});
-
-</script>
 
 
-        | <a href='mailto:feedback@readwarp.com'>feedback</a>
-      </div>
-
-      <b>HackerStream</b>
-      <img height="1" width="10" src="/images/s.gif">
-      <a class='new_column_link' href='my_stream'>my stream</a> |
-      <a class='new_column_link' href='following'>following</a> |
-      <a class='new_column_link' href='active_stories'>active stories</a> |
-      <a class='new_column_link' href='active_users'>active users</a> |
-      <a class='internal' target="_blank" href="http://news.ycombinator.com/submit">submit</a>
-    </div>
-    <div id='more-items' style='display:none'></div>
-
-    <div class="column" id='stream_column'>
-  <h3>Hacker News in real-time</h3>
-  <div id="stream">  <div class='item' hnid='2628467' story_hnid='2625860' author='danssig' style='display:none'>
-  <div class='contextbox'>
  <iframe src="http://hackerstream.com/" scrolling="auto" style="border: 0" width="900" height="1000" frameborder="0" ></iframe>
-
-    <div class='title internal story'>
-      <a href="http://news.ycombinator.com/item?id=2625860">Apple&apos;s iCloud will automatically store, sync data...</a>
-    </div>
-      <div class='moreComments button'>4 more comments &nbsp;&darr;</div>
-      <div class='context'>
-          <div class='ancestor' hnid='2626392'>
-            <div class='comhead'>
-  by <a class='author internal' followee='user:ender7' href='http://news.ycombinator.com/user?id=ender7'>ender7</a>
-  | about 15 hours ago
-  | <a class='comment external' followee='/reply/2626392' href='/?item=2626392'>reply</a>
-</div>
-
-<td class="default">
-<div class="comment"><font color="#000000">In general the service seems really neat, but I have to admit I find their storage and pricing system a bit confusing. How is the average consumer going to react? I can&apos;t imagine explaining this to my parents...</font></div><p>---</p><p>So...it stores all my files?</p><p><i>Yes. Well, sort of. If your apps use the iCloud API.</i></p><p>What?</p><p><i>Nevermind. Yes. It stores your files, and sync them across all your computers.</i></p><p>What does it cost?</p><p><i>It&apos;s free.</i></p><p>Awesome. And I can access them any time?</p><p><i>Yep. Except photos. Those are only stored for 30 days. But the copies stick around on your devices. But only your PCs - your phones only keep the last 1000 photos.</i></p><p>Oh. But what if I want to look at older photos on my--</p><p><i>Put it in an album. Then it&apos;s always available.</i></p><p>Oh...kay. I guess that makes sense. What about music?</p><p><i>If you buy it from the iTunes store, then it syncs automatically to all your devices!</i></p><p>Sweet!</p><p><i>Up to 10 devices.</i></p><p>Eh, that&apos;s fine, that seems like a lot of devices. What if I don&apos;t buy it from the iTunes store?</p><p><i>You can sync that too!</i></p><p>Great!</p><p><i>It costs money though.</i></p><p>Wait. I thought you said it was free.</p><p><i>Non-iTunes Store music costs a yearly fee to store ($24.99). Although you&apos;re not really storing them. See, iTunes will scan your music and try to guess what music you have, and then grant you access to the iTunes Store copies of it. Unless it gets confused and thinks your Bob Dylan is Jimmy Hendricks. But that probably won&apos;t happen.</i></p><p>Er.</p><p><i>But you can "store" an unlimited number of songs!</i></p><p>Unlimited? That&apos;s a lot!</p><p><i>Yeah, you can also store things like mail, documents, and backups on there too!</i></p><p>Are those unlimited too?</p><p><i>No, those have a max of 5GB. Except for Apps, iBooks, and iTunes music. Those don&apos;t count. Oh, and neither do photos. The ones that we store for 30 days.</i></p><p>What happens if I use up all 5GB?</p><p><i>We&apos;re guessing that most people won&apos;t.</i></p><p>You should see my inbox.</p><p><i>We&apos;ll probably have a plan where you can pay more money to get more storage.</i></p><p>Ah, okay. So...</p><p><i>Yes?</i></p><p>It&apos;s free. Unless I want to upload my non-iTunes store music, in which case it&apos;s $24.99/yr. And it has unlimited storage for App backups, iTunes store music, and iBooks, and a 5GB limit for documents, e-mail, and "other stuff", and a 30-day cache of all of the photos I&apos;ve taken. And it happens automatically in the background, provided whatever App I&apos;m using is correctly hooked into the iCloud service, which may or may not be apparent at the time.</p><p><i>Yes.</i></p><p>Ohhhhkay.</p><p>---</p><p>My parents have started to use Dropbox ("put stuff you want in the folder") and really like it. I&apos;m not sure they&apos;ll understand how this service works, if they understand that it exists at all.</p></td>
-
-          </div>
-          <div class='ancestor' hnid='2626618'>
-            <div class='comhead'>
-  by <a class='author internal' followee='user:GHFigs' href='http://news.ycombinator.com/user?id=GHFigs'>GHFigs</a>
-  | about 14 hours ago
-  | <a class='comment external' followee='/reply/2626618' href='/?item=2626618'>reply</a>
-</div>
-
-<td class="default">
-<div class="comment"><font color="#000000">Do your parents use any iOS devices? It sounds like you&apos;re explaining iCloud in excessive detail to someone who has no use for it and doesn&apos;t understand the concept of syncing at all. Someone used to iTunes is not going to be that confused when things that used to require a physical sync can now happen automatically without one.</font></div><p>Many things are transparent to the user, too. For instance, Apple has always had "backups" of your purchases. All they&apos;ve done here is enable you to download them instead of restoring from your own copy. You don&apos;t have to learn or understand anything new for that to be useful.</p></td>
-
-          </div>
-          <div class='ancestor' hnid='2626977'>
-            <div class='comhead'>
-  by <a class='author internal' followee='user:alexfarran' href='http://news.ycombinator.com/user?id=alexfarran'>alexfarran</a>
-  | about 13 hours ago
-  | <a class='comment external' followee='/reply/2626977' href='/?item=2626977'>reply</a>
-</div>
-
-<td class="default">
-<div class="comment"><font color="#000000">I don&apos;t think iTunes is that simple to use. It&apos;s very easy to make a mistake and lose all your contacts. I know two people that happened to, and to be honest I cross my fingers and hope when I upgrade my iPhone. Dropbox is very easy to understand in comparison.</font></div></td>
-
-          </div>
-          <div class='ancestor' hnid='2627167'>
-            <div class='comhead'>
-  by <a class='author internal' followee='user:klinquist' href='http://news.ycombinator.com/user?id=klinquist'>klinquist</a>
-  | about 12 hours ago
-  | <a class='comment external' followee='/reply/2627167' href='/?item=2627167'>reply</a>
-</div>
-
-<td class="default">
-<div class="comment"><font color="#000000">I recommend that people set up their iDevices to sync (via the exchange protocol) to GMail. Your calendar/contacts will stay there.</font></div></td>
-
-          </div>
-      </div>
-  </div>
-
-  <div class='itembox'%>
-    <div class='comhead'>
-  by <a class='author internal' followee='user:danssig' href='http://news.ycombinator.com/user?id=danssig'>danssig</a>
-  | about 2 hours ago
-  | <a class='comment external' followee='/reply/2628467' href='/?item=2628467'>reply</a>
-</div>
-
-<td class="default">
-<div class="comment"><font color="#000000">Then you&apos;re giving Google the ability to wipe your phone.</font></div></td>
-
-  </div>
-</div>
-          
-          </div>
-      </div>
-  </div>
-
-
-
-
-  <div class='newrequest'></div>
-
-      <div class='holding' style='display:none'></div>
-    </div>
-  </div>
-
-
-<script>
-    mostRecentItem = 2628496;
-  shortlist = ["pg","tptacek","patio11","edw519","jacquesm","fogus","cwan","jrockway","swombat","icey","raganwald","vaksel","tobylane","jbk","2627817","2628104","2627734","2627602","2628082","2627582","2627074","2626332","2625860","2625605"];
-$('.item[hnid='+0+']').addClass('shortlist');
-
-</script>
-
 
 <p>@Twitter</p>
 
@@ -356,4 +152,5 @@ new TWTR.Widget({
   </div>
 </body>
 </html>
+
 
