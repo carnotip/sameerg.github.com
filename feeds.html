@@ -54,7 +54,2033 @@
 
 
 
- <iframe src="http://hackerstream.com/" scrolling="auto" style="border: 0" width="900" height="1000" frameborder="0" ></iframe>
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <title>HackerStream</title>
+    <link href="/stylesheets/application.css?1307385026" media="screen" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" media="handheld" href="/stylesheets/handheld/application.css"/>
+    <link rel="stylesheet" media="screen and (max-device-width: 801px)" href="/stylesheets/handheld/application.css"/>
+    <script src="/javascripts/jquery.js?1298768833" type="text/javascript"></script>
+<script src="/javascripts/rails.js?1298768833" type="text/javascript"></script>
+<script src="/javascripts/application.js?1307398054" type="text/javascript"></script>
+    <meta name="csrf-param" content="authenticity_token"/>
+<meta name="csrf-token" content="HcAun0TjUqilMfuI/CyLcBlVNDxbeCNt+Spt+VqaeNc="/>
+  </head>
+
+  <body>
+    <div id="pagetop">
+      <div class='right'>
+        <div id='login-links' style='display:none'>
+  <a id='login-link' href='#'>login</a> |
+  <a id='signup-link' href='#'>signup</a>
+</div>
+
+<form id='login-form' style='display:none'>
+  email: <input id='login-input'/>
+  <input id='login-submit' type='submit' value='login'/>
+</form>
+
+<div id='logout-links' style='display:none'>
+  <input id='logout-button' type='submit' value='logout'/>
+  <input id='dontlogout-button' type='submit' value='cancel'/>
+</div>
+
+<script>
+  location.hash = '#pg,tptacek,patio11,edw519,jacquesm,fogus,cwan,jrockway,swombat,icey,raganwald,vaksel,tobylane,jbk,2627817,2628104,2627734,2627602,2628082,2627582,2627074,2626332,2625860,2625605';
+</script>
+
+<a id='login-user' style='display:inline' href='#'>
+
+</a>
+
+<script>
+  $('#login-link').click(function() {
+  $('#login-submit').attr('value', 'login');
+  $('#login-links').fadeOut(
+    function(){$('#login-form').fadeIn(
+      function(){$('#login-input').focus();});});
+  return false;
+});
+
+$('#signup-link').click(function() {
+  $('#login-submit').attr('value', 'signup');
+  $('#login-links').fadeOut(
+    function(){$('#login-form').fadeIn(
+      function(){$('#login-input').focus();});});
+  return false;
+});
+
+$('#login-form').submit(function() {
+  $('#login-form').hide();
+  $.ajax({
+    url: '/login',
+    type: 'post',
+    data: {
+      email: $('#login-input').val(),
+      shortlist: shortlist.join(','),
+    },
+    success: function() {
+      $('#login-user').html($('#login-input').val());
+      $('#login-user').fadeIn();
+      userLoggedIn();
+    },
+    error: function() {
+      $('#login-links').show();
+    }
+  });
+  return false;
+});
+
+$('#login-user').click(function() {
+  $('#login-user').fadeOut(function() {
+    $('#logout-links').fadeIn();});
+  return false;
+});
+
+$('#logout-button').click(function() {
+  $('#logout-links').hide();
+  $.ajax({
+    url: '/login',
+    type: 'delete',
+    success: function() {
+      $('#login-links').fadeIn();
+    },
+    error: function() {
+      $('#login-user').show();
+    },
+  });
+  return false;
+});
+
+$('#dontlogout-button').click(function() {
+  $('#logout-links').fadeOut(function() {
+    $('#login-user').fadeIn();});});
+
+</script>
+
+
+        | <a href='mailto:feedback@readwarp.com'>feedback</a>
+      </div>
+
+      <b>HackerStream</b>
+      <img height="1" width="10" src="/images/s.gif">
+      <a class='new_column_link' href='my_stream'>my stream</a> |
+      <a class='new_column_link' href='following'>following</a> |
+      <a class='new_column_link' href='active_stories'>active stories</a> |
+      <a class='new_column_link' href='active_users'>active users</a> |
+      <a class='internal' target="_blank" href="http://news.ycombinator.com/submit">submit</a>
+    </div>
+    <div id='more-items' style='display:none'></div>
+
+    <div class="column" id='stream_column'>
+  <h3>Hacker News in real-time</h3>
+  <div id="stream">  <div class='item' hnid='2628496' story_hnid='2628318' author='train_robber' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628318">Infosys, TCS or Wipro?</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:train_robber' href='http://news.ycombinator.com/user?id=train_robber'>train_robber</a>
+  | less than a minute ago
+  | <a class='comment external' followee='/reply/2628496' href='/?item=2628496'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">There exists a good middle ground in India too - companies that have some of the advantages that Infosys or TCS offers (like the extra comforts) and the advantages of a start-up working with more modern technologies. Companies like Bosch, Siemens etc. I worked in one of those earlier, and I am quite happy that I had that experience - both in my engineering career and in my life.</font></div><p>I&apos;ve moved on to a startup in the recent past. Even though I find it more fulfilling - I believe that it&apos;s a good idea for young engineers to experience that slice of life, atleast in a company that doesn&apos;t stunt your learning experience.</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628494' story_hnid='' author='revorad' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href='http://news.ycombinator.com/item?id=2628494'>Wherein I review the Cr48, partly in contrast to the iPad</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:revorad' href='http://news.ycombinator.com/user?id=revorad'>revorad</a>
+  | less than a minute ago
+  | <a class='comment external' followee='/reply/2628494' href='/?item=2628494'>reply</a>
+</div>
+
+
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628495' story_hnid='' author='vansci225' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href='http://news.ycombinator.com/item?id=2628495'>Primera División de México_Camisetas De Fútbol,Camisetas De Fútbol Baratas</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:vansci225' href='http://news.ycombinator.com/user?id=vansci225'>vansci225</a>
+  | less than a minute ago
+  | <a class='comment external' followee='/reply/2628495' href='/?item=2628495'>reply</a>
+</div>
+
+
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628497' story_hnid='' author='engr_haseeb' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href='http://news.ycombinator.com/item?id=2628497'>IOS 5 Already Jailbroken on iPod touch 4G [Pictures]</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:engr_haseeb' href='http://news.ycombinator.com/user?id=engr_haseeb'>engr_haseeb</a>
+  | less than a minute ago
+  | <a class='comment external' followee='/reply/2628497' href='/?item=2628497'>reply</a>
+</div>
+
+
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628491' story_hnid='2628175' author='jrockway' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628175">Google +1 Button Performance Review</a>
+    </div>
+      <div class='moreComments button'>1 more comment &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628473'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:andybak' href='http://news.ycombinator.com/user?id=andybak'>andybak</a>
+  | 16 minutes ago
+  | <a class='comment external' followee='/reply/2628473' href='/?item=2628473'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Someone at Google should get a slap upside the head for not getting this spot on.</font></div><p>Google is evangelising performance on one hand and making careless errors on the other...</p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:jrockway' href='http://news.ycombinator.com/user?id=jrockway'>jrockway</a>
+  | 2 minutes ago
+  | <a class='comment external' followee='/reply/2628491' href='/?item=2628491'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#5a5a5a">Yeah, how dare they say the lowest-performing option first in an in-passing comment!  What if the user knows nothing about performance and stops there!  Their page will load 8 milliseconds less quickly!  Amateur hour!11!</font></div><p>(&#60;/sarcasm&#62;)</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628493' story_hnid='2628314' author='astropirate' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628314">Windows 7 vs Lion (Pricing)</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:astropirate' href='http://news.ycombinator.com/user?id=astropirate'>astropirate</a>
+  | 1 minute ago
+  | <a class='comment external' followee='/reply/2628493' href='/?item=2628493'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Sure but you are paying 4 times as much to get the Mac hardware.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628490' story_hnid='2628454' author='tobylane' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628454">Ask HN: bad ideas vs letting creativity flow</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:tobylane' href='http://news.ycombinator.com/user?id=tobylane'>tobylane</a>
+  | 2 minutes ago
+  | <a class='comment external' followee='/reply/2628490' href='/?item=2628490'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">"Reductio ad absurdum". Keep asking about the details till either you no longer think it&apos;s stupid, or they see some downsides to it.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628492' story_hnid='2625605' author='dchest' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625605">Mac OS X Lion: Coming In July For $29</a>
+    </div>
+      <div class='moreComments button'>3 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2625837'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:recoiledsnake' href='http://news.ycombinator.com/user?id=recoiledsnake'>recoiledsnake</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2625837' href='/?item=2625837'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Not sure why below comment is dead. The account seems ok and not hell banned. Was it flagged to death? If so, anyone who flagged it,why?</font></div><p>dsplittgerber 24 minutes ago | link [dead]</p><p>Anyone else surprised by how many hugely popular apps Apple is going to kill with new Lion/iOS? Instapaper built-into Safari now, all kinds of messanger apps killed by iMessage, some of those photo apps going down the drain as well, Reminders app is a huge one as well. All targeting really popular app categories.</p><p>Sure, some people care about thing X being done supremely well and will still pay for some apps. But the huge majority will probably be really fine with Apples version.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2625914'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:ansy' href='http://news.ycombinator.com/user?id=ansy'>ansy</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2625914' href='/?item=2625914'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">This is par for the course with Apple. I remember back in the day there was this super popular shareware app called Aaron that gave System 7 users a System 8 looking theme. Keep in mind this was the dark ages of Apple.</font></div><p>Aaron evolved into Kaleidoscope. A general purpose shareware theme manager that was met with enthusiasm by the Mac community. Kaleidoscope was synonymous with themes on Mac OS.</p><p><a href="http://www.kaleidoscope.net/What_is_Kaleidoscope.html" rel="nofollow">http://www.kaleidoscope.net/What_is_Kaleidoscope.html</a></p><p>By the time OS 8.5 rolled around Apple introduced Appearance Manager. Which was no more than a total rip off of Kaleidoscope. Apple engineers even wrote an internal utility that would convert Kaleidoscope themes into Appearance Manager themes.</p><p><a href="http://en.wikipedia.org/wiki/Appearance_Manager#Kaleidoscope" rel="nofollow">http://en.wikipedia.org/wiki/Appearance_Manager#Kaleidoscope</a></p><p>The shareware author got zero credit. Zero money. He just got ripped off by Apple. In the end, though, Appearance Manager never took off. It was a combination of Kaleidoscope&apos;s momentum and the taint of Appearance Manager that kept theme authors from adopting it.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626727'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:adamta' href='http://news.ycombinator.com/user?id=adamta'>adamta</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626727' href='/?item=2626727'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I remember Konfabulator and Watson (is that what it was called? The one that was ripped off as a new version of Sherlock back when that was still a thing), but I think you&apos;re mistaken about why Appearance Manager never took off. If I remember correctly, Apple just never provided external developers with theme authoring software or documentation for the theme format, because between the original DP period and the public release, they(/Steve) decided that they didn&apos;t particularly <i>want</i> to promote wildly different UI styles. They never even officially released the themes they had demoed, other than Platinum.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:dchest' href='http://news.ycombinator.com/user?id=dchest'>dchest</a>
+  | 2 minutes ago
+  | <a class='comment external' followee='/reply/2628492' href='/?item=2628492'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Watson story: <a href="http://www.karelia.com/news/small_and_nimble_the_long_s.html" rel="nofollow">http://www.karelia.com/news/small_and_nimble_the_long_s.html</a></font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628487' story_hnid='2625860' author='fauigerzigerk' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625860">Apple&apos;s iCloud will automatically store, sync data...</a>
+    </div>
+      <div class='moreComments button'>4 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626392'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:ender7' href='http://news.ycombinator.com/user?id=ender7'>ender7</a>
+  | about 14 hours ago
+  | <a class='comment external' followee='/reply/2626392' href='/?item=2626392'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">In general the service seems really neat, but I have to admit I find their storage and pricing system a bit confusing. How is the average consumer going to react? I can&apos;t imagine explaining this to my parents...</font></div><p>---</p><p>So...it stores all my files?</p><p><i>Yes. Well, sort of. If your apps use the iCloud API.</i></p><p>What?</p><p><i>Nevermind. Yes. It stores your files, and sync them across all your computers.</i></p><p>What does it cost?</p><p><i>It&apos;s free.</i></p><p>Awesome. And I can access them any time?</p><p><i>Yep. Except photos. Those are only stored for 30 days. But the copies stick around on your devices. But only your PCs - your phones only keep the last 1000 photos.</i></p><p>Oh. But what if I want to look at older photos on my--</p><p><i>Put it in an album. Then it&apos;s always available.</i></p><p>Oh...kay. I guess that makes sense. What about music?</p><p><i>If you buy it from the iTunes store, then it syncs automatically to all your devices!</i></p><p>Sweet!</p><p><i>Up to 10 devices.</i></p><p>Eh, that&apos;s fine, that seems like a lot of devices. What if I don&apos;t buy it from the iTunes store?</p><p><i>You can sync that too!</i></p><p>Great!</p><p><i>It costs money though.</i></p><p>Wait. I thought you said it was free.</p><p><i>Non-iTunes Store music costs a yearly fee to store ($24.99). Although you&apos;re not really storing them. See, iTunes will scan your music and try to guess what music you have, and then grant you access to the iTunes Store copies of it. Unless it gets confused and thinks your Bob Dylan is Jimmy Hendricks. But that probably won&apos;t happen.</i></p><p>Er.</p><p><i>But you can "store" an unlimited number of songs!</i></p><p>Unlimited? That&apos;s a lot!</p><p><i>Yeah, you can also store things like mail, documents, and backups on there too!</i></p><p>Are those unlimited too?</p><p><i>No, those have a max of 5GB. Except for Apps, iBooks, and iTunes music. Those don&apos;t count. Oh, and neither do photos. The ones that we store for 30 days.</i></p><p>What happens if I use up all 5GB?</p><p><i>We&apos;re guessing that most people won&apos;t.</i></p><p>You should see my inbox.</p><p><i>We&apos;ll probably have a plan where you can pay more money to get more storage.</i></p><p>Ah, okay. So...</p><p><i>Yes?</i></p><p>It&apos;s free. Unless I want to upload my non-iTunes store music, in which case it&apos;s $24.99/yr. And it has unlimited storage for App backups, iTunes store music, and iBooks, and a 5GB limit for documents, e-mail, and "other stuff", and a 30-day cache of all of the photos I&apos;ve taken. And it happens automatically in the background, provided whatever App I&apos;m using is correctly hooked into the iCloud service, which may or may not be apparent at the time.</p><p><i>Yes.</i></p><p>Ohhhhkay.</p><p>---</p><p>My parents have started to use Dropbox ("put stuff you want in the folder") and really like it. I&apos;m not sure they&apos;ll understand how this service works, if they understand that it exists at all.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626999'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:jimbokun' href='http://news.ycombinator.com/user?id=jimbokun'>jimbokun</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626999' href='/?item=2626999'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Apple is betting that they have chosen those limits such that most of their customers will not bump into them.</font></div><p>Customers legitimately owning more than 10 devices is a problem Apple would love to deal with.</p><p>They are betting that most people only look at the last 1,000 photos they&apos;ve taken on their phone, most of the time.</p><p>They are betting you will use all of the devices where you might want to look at photos within 30 days.</p><p>$25 a year to upload any music and listen to it anywhere, is a pretty simple value proposition.  The free iTunes caveat is more of an edge case, I think.</p><p>5GB...well, yeah, I can see a lot of people hitting that one.  Will be interesting to see if they quietly increase this over time to keep most users under the limit, like Gmail.</p><p>We will see if Apple&apos;s bets turn out to be correct.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628412'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:fauigerzigerk' href='http://news.ycombinator.com/user?id=fauigerzigerk'>fauigerzigerk</a>
+  | about 1 hour ago
+  | <a class='comment external' followee='/reply/2628412' href='/?item=2628412'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">You cannot upload any music. It&apos;s not a deduping technology. If iTunes doesn&apos;t have it or they don&apos;t find it, you can&apos;t use it.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628452'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:rufo' href='http://news.ycombinator.com/user?id=rufo'>rufo</a>
+  | 26 minutes ago
+  | <a class='comment external' followee='/reply/2628452' href='/?item=2628452'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">On the "iTunes in the Cloud" page it pretty clearly states that "All you have to upload is what iTunes can’t match":</font></div><p><a href="http://www.apple.com/icloud/features/" rel="nofollow">http://www.apple.com/icloud/features/</a></p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:fauigerzigerk' href='http://news.ycombinator.com/user?id=fauigerzigerk'>fauigerzigerk</a>
+  | 4 minutes ago
+  | <a class='comment external' followee='/reply/2628487' href='/?item=2628487'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">You&apos;re absolutely right. My bad. Sounds like a useful service in that event.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628488' story_hnid='' author='redtwo' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href='http://news.ycombinator.com/item?id=2628488'> Please review my idea</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:redtwo' href='http://news.ycombinator.com/user?id=redtwo'>redtwo</a>
+  | 3 minutes ago
+  | <a class='comment external' followee='/reply/2628488' href='/?item=2628488'>reply</a>
+</div>
+
+
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628489' story_hnid='' author='ventureawaits' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href='http://news.ycombinator.com/item?id=2628489'>Ask HN: How do I convert a list of startup ideas into a single, strong vision?</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:ventureawaits' href='http://news.ycombinator.com/user?id=ventureawaits'>ventureawaits</a>
+  | 4 minutes ago
+  | <a class='comment external' followee='/reply/2628489' href='/?item=2628489'>reply</a>
+</div>
+
+<div class="comment"><td>Hi HN, I&apos;m the CEO of a small startup in the midwest (this is a throwaway account)<p>I&apos;m in the process of quitting my moderately successful company to start anew. I made the choice once I realized that 1) I&apos;m no longer learning new stuff every day by having to meet new challenges and 2) my current startup has created a great brand but is catering to a small market: After six years in business, it will not grow much further without a large change in product strategy. I would rather put it under different management than risk it just to satisfy my urge to start from square one.</p><p>For my next startup, I&apos;m currently looking at the ebook space or doing something having to do with daily deals, following the groupon craze but for a different market segment. I also have an urge to go into the app space, developing games or this idea of an awesome social weight-loss app I have.&#60;p&#62;My general problem is that I generate too many business ideas: I have a list of 50 or so put together during the last two months. I&apos;m passionate about each of them for a day or two and I need to convert that day-long enthusiasm into a long-term passion.</p><p>My current idea of solving this problem is to let it sort itself out. I&apos;m betting that I&apos;m in the middle of a process that will end up with me churning my ideas down to one single vision.
+But here&apos;s the question: is there any way I can hedge this bet? Have you been in a similar situation and/or have any suggestions on how to put the process on fast-track?</p><p>I&apos;m grateful for any suggestions, including "shut the fuck up and stay with your current company, dimwit", if that&apos;s your sentiment.</p></td></div>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628486' story_hnid='2628357' author='neopallium' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628357">Nuclear reactor on Kickstarter</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:neopallium' href='http://news.ycombinator.com/user?id=neopallium'>neopallium</a>
+  | 4 minutes ago
+  | <a class='comment external' followee='/reply/2628486' href='/?item=2628486'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">"Fusion Reactor" not "Nuclear reactor"</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628483' story_hnid='2627074' author='ordinary' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627074">Demoted</a>
+    </div>
+      <div class='moreComments button'>2 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2627364'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:kenjackson' href='http://news.ycombinator.com/user?id=kenjackson'>kenjackson</a>
+  | about 10 hours ago
+  | <a class='comment external' followee='/reply/2627364' href='/?item=2627364'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Gruber is repeating the obvious, but in a convoluted way.</font></div><p>Apple is about selling HW.  Google is about selling ads.</p><p>That&apos;s it.  Everything else falls from that.</p><p>Google&apos;s goal is to commodotize HW, and I this is, at least theoretically, doable.  Apple can&apos;t really commodotize ads, at least in no way I can think of.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628326'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:Tichy' href='http://news.ycombinator.com/user?id=Tichy'>Tichy</a>
+  | about 2 hours ago
+  | <a class='comment external' followee='/reply/2628326' href='/?item=2628326'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I think Google is more about collecting data. Ads are just a byproduct.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:ordinary' href='http://news.ycombinator.com/user?id=ordinary'>ordinary</a>
+  | 7 minutes ago
+  | <a class='comment external' followee='/reply/2628483' href='/?item=2628483'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I think you&apos;re confusing the end with the means. Collecting data is a method Google uses to be able to sell (more expensive) ads. The data collection is not where the money comes from, the ads are.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628484' story_hnid='2625605' author='AllenKids' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625605">Mac OS X Lion: Coming In July For $29</a>
+    </div>
+      <div class='moreComments button'>7 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2625837'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:recoiledsnake' href='http://news.ycombinator.com/user?id=recoiledsnake'>recoiledsnake</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2625837' href='/?item=2625837'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Not sure why below comment is dead. The account seems ok and not hell banned. Was it flagged to death? If so, anyone who flagged it,why?</font></div><p>dsplittgerber 24 minutes ago | link [dead]</p><p>Anyone else surprised by how many hugely popular apps Apple is going to kill with new Lion/iOS? Instapaper built-into Safari now, all kinds of messanger apps killed by iMessage, some of those photo apps going down the drain as well, Reminders app is a huge one as well. All targeting really popular app categories.</p><p>Sure, some people care about thing X being done supremely well and will still pay for some apps. But the huge majority will probably be really fine with Apples version.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626025'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:erikpukinskis' href='http://news.ycombinator.com/user?id=erikpukinskis'>erikpukinskis</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2626025' href='/?item=2626025'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000"><i>Anyone else surprised by how many hugely popular apps Apple is going to kill with new Lion/iOS?</i></font></div><p>I know, it&apos;ll be like the great Safari massacre all over again, where Apple singlehandedly drove Firefox and Chrome to stop releasing Mac versions. Not to mention the Day When Email Apps&apos; Blood Ran Like Water In The Streets, when everyone stopped using Exchange and Gmail because Apple released Mail.app.</p><p>And don&apos;t even talk to me about what iChat did to Skype. I can&apos;t bear to think of it....</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626131'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:randallsquared' href='http://news.ycombinator.com/user?id=randallsquared'>randallsquared</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2626131' href='/?item=2626131'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Cherrypick, much?  :)  It seems that all your examples are cases where interoperability with or working like the Windows version is the primary required feature.  For years after iTunes, there was no reasonable (GUI) alternative for MP3 playing, at the same time that iTunes was awful if you had a large, diverse collection without ID3 tags.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2626610'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:AllenKids' href='http://news.ycombinator.com/user?id=AllenKids'>AllenKids</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626610' href='/?item=2626610'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">If you have a large diverse collection without ID3 tags you are pretty much fucked anyway. folders is extremely limited in sorting music which leaves you what? playlists?</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2626887'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:randallsquared' href='http://news.ycombinator.com/user?id=randallsquared'>randallsquared</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626887' href='/?item=2626887'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Well, I used folders and filenames for years, from 1998ish through June 2003.  Worked fine; I mostly wanted to listen to entire albums, which mapped well to folders.</font></div><p>Then I got a Mac, and pointed iTunes at my music without backing it up first (because, after all iTunes was an <i>MP3 player</i>, and why would it <i>write</i> to my MP3 collection?!).  Oops.  Later I found that there was some import option I shouldn&apos;t have checked, and iTunes happily moved all my MP3s from their well-sorted folder structure into "Unknown Artist - Unknown Album - Unknown Title".  Yay.</p><p>Even when I eventually got some software that would use a music database to figure out what tracks were, there were a distressing number of tracks that it couldn&apos;t identify (hundreds), and of the ones it could, it mostly did so in a very literal way, such that I have a lot of folders like "Movie Soundtrack - Artist Name" with a single track inside.</p><p>Could I fix all this?  Of course.  Eventually.  Can you tell I&apos;m still, eight years later, extremely angry at iTunes?</p><p>Now I just listen to Pandora.  Screw it.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627057'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:AllenKids' href='http://news.ycombinator.com/user?id=AllenKids'>AllenKids</a>
+  | about 11 hours ago
+  | <a class='comment external' followee='/reply/2627057' href='/?item=2627057'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I agree the default option should be "DO NOT TOUCH"</font></div><p>And about the single track folders, tick "part of a compilation" in info box will do the trick.</p><p>Keep listen to Pandora while it last.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628038'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:crag' href='http://news.ycombinator.com/user?id=crag'>crag</a>
+  | about 4 hours ago
+  | <a class='comment external' followee='/reply/2628038' href='/?item=2628038'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">While it&apos;s lasts? Pandora going someplace?</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:AllenKids' href='http://news.ycombinator.com/user?id=AllenKids'>AllenKids</a>
+  | 6 minutes ago
+  | <a class='comment external' followee='/reply/2628484' href='/?item=2628484'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Space!!!!</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628485' story_hnid='2627768' author='arethuza' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627768">Security is Mathematics</a>
+    </div>
+      <div class='moreComments button'>1 more comment &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2627928'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:FilterJoe' href='http://news.ycombinator.com/user?id=FilterJoe'>FilterJoe</a>
+  | about 5 hours ago
+  | <a class='comment external' followee='/reply/2627928' href='/?item=2627928'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I would argue the opposite: The "security is mathematics" mindset leads to overall system designs that are often less secure. How? The mathematically inclined security experts fail to incorporate (mathematically fuzzy) human factors such as usability and carelessness.</font></div><p>Typical example: Require users to change a password once/month and there&apos;s a maximum of one month&apos;s time when a password thief has access to an account. True enough. So what do users do (and let&apos;s thrown in a requirement for at least one capital letter, at least 1 digit, at least one symbol, 9 character minimum)?</p><p>Month 1: Charlie1!</p><p>Month 2: Charlie2!</p><p>Month 3: Charlie3!</p><p>Month x: Charliex!</p><p>Meanwhile, formulations for password security that strike a reasonable balance between security and usability (and thus actually get used) are rejected immediately because of mathematical edge cases.</p><p>Here&apos;s my formulation for a balanced security approach for home users:</p><p>"Use a password manager to assign unique, random 15 character passwords for all accounts, protecting them with a strong master password."</p><p>I can think of quite a few edge cases where this system will fail. Keystroke logging is the most obvious. In actual practice, there has not yet been a case of a password database being breached due to keystroke logging the master password (at least not among the market-leading password managers).</p><p>In actual practice, taking into account human factors, this system is more secure than that practiced by the vast majority of end users. And far more secure than rotating Charliex! passwords.</p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:arethuza' href='http://news.ycombinator.com/user?id=arethuza'>arethuza</a>
+  | 6 minutes ago
+  | <a class='comment external' followee='/reply/2628485' href='/?item=2628485'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">"there has not yet been a case"</font></div><p>How would you know if this had happened?</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628482' story_hnid='2627074' author='cubicle67' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627074">Demoted</a>
+    </div>
+      <div class='moreComments button'>3 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2627467'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:napierzaza' href='http://news.ycombinator.com/user?id=napierzaza'>napierzaza</a>
+  | about 9 hours ago
+  | <a class='comment external' followee='/reply/2627467' href='/?item=2627467'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">"That’s what we’ll remember about today’s keynote ten years from now."</font></div><p>Classic Gruber. I really hope that no one that I know ever mentions a WWDC presentation from a decade before.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627618'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:matthew-wegner' href='http://news.ycombinator.com/user?id=matthew-wegner'>matthew-wegner</a>
+  | about 8 hours ago
+  | <a class='comment external' followee='/reply/2627618' href='/?item=2627618'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Oh, I don&apos;t know.  The 2001 Macworld keynote that outlines the "digital hub" is still fascinating:</font></div><p><a href="http://www.youtube.com/watch?v=9046oXrm7f8" rel="nofollow">http://www.youtube.com/watch?v=9046oXrm7f8</a></p><p>It&apos;s remarkably prescient in a lot of ways. Take this quote:</p><p><i>Digital cameras now constitute 15% of all cameras sold in the US. 15% percent.  It&apos;ll be 50% in a few years.</i></p><p>He also makes the point that a hub is necessary because of all these various devices can&apos;t talk to the Internet.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627708'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:patrickaljord' href='http://news.ycombinator.com/user?id=patrickaljord'>patrickaljord</a>
+  | about 7 hours ago
+  | <a class='comment external' followee='/reply/2627708' href='/?item=2627708'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">&#62; Digital cameras now constitute 15% of all cameras sold in the US. 15% percent. It&apos;ll be 50% in a few years.</font></div><p>Really? That&apos;s the same thought I had the first time I saw a usable digital camera 10 years ago, and I don&apos;t think I&apos;m special or that I was the only one...</p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:cubicle67' href='http://news.ycombinator.com/user?id=cubicle67'>cubicle67</a>
+  | 7 minutes ago
+  | <a class='comment external' followee='/reply/2628482' href='/?item=2628482'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">go and read photography magazines from that era. There&apos;s was much heated and vehement objection to including articles pertaining to digital photography and cameras. Many photographers at that time were convinced digital cameras were just toys and had no part in &apos;professional&apos; magazines.</font></div><p>of course, some thought the opposite</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628481' story_hnid='2628328' author='braindead_in' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628328">GWEI: Plot to make Google eat itself</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:braindead_in' href='http://news.ycombinator.com/user?id=braindead_in'>braindead_in</a>
+  | 8 minutes ago
+  | <a class='comment external' followee='/reply/2628481' href='/?item=2628481'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Are all Google&apos;s share&apos;s on the market? I think the IPO was only for a part of the company, right?</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628479' story_hnid='2627734' author='arethuza' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627734">RSA finally comes clean: SecurID is compromised</a>
+    </div>
+      <div class='moreComments button'>4 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628031'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:adulau' href='http://news.ycombinator.com/user?id=adulau'>adulau</a>
+  | about 5 hours ago
+  | <a class='comment external' followee='/reply/2628031' href='/?item=2628031'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">There is fundamental issue about those kind of tokens. The customer is not able to renew or set the private key (seed in RSA terms) of their tokens. It&apos;s a kind of insecure business model where the customer has no control over the tokens and is bound to the security of the supplier (if the supplier is compromised...). There are solutions like Yubikey or other compliant HOTP/TOTP tokens where the customer has the control of the private keys inside the token.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628068'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:InclinedPlane' href='http://news.ycombinator.com/user?id=InclinedPlane'>InclinedPlane</a>
+  | about 4 hours ago
+  | <a class='comment external' followee='/reply/2628068' href='/?item=2628068'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Indeed. It&apos;s rather shoddy engineering if you ask me. Consider that, for example, SSL certs are generated and the private key is never disclosed to the cert authority when purchasing a key. That way only the owner of the SSL cert can actually use it.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628199'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:bigiain' href='http://news.ycombinator.com/user?id=bigiain'>bigiain</a>
+  | about 3 hours ago
+  | <a class='comment external' followee='/reply/2628199' href='/?item=2628199'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">"That way only the owner of the SSL cert can actually use it."</font></div><p>Errrmmm, I&apos;m not entirely sure that&apos;s correct - I wonder how many of Sony&apos;s private keys are in scriptkiddies hands right now?</p><p>The webserver needs access to the private key. Anyone who gets root on the webserver can read the private key.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628254'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:joch' href='http://news.ycombinator.com/user?id=joch'>joch</a>
+  | about 2 hours ago
+  | <a class='comment external' followee='/reply/2628254' href='/?item=2628254'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Not entirely sure that&apos;s correct either. One could use a Hardware Security Module, such as the Thales nShield Connect[1], which will keep the private keys secure (at least in theory).</font></div><p>[1] <a href="http://www.thales-esecurity.com/Products/Hardware%20Security%20Modules/nShield%20Connect.aspx" rel="nofollow">http://www.thales-esecurity.com/Products/Hardware%20Security...</a></p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:arethuza' href='http://news.ycombinator.com/user?id=arethuza'>arethuza</a>
+  | 11 minutes ago
+  | <a class='comment external' followee='/reply/2628479' href='/?item=2628479'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Interesting, I&apos;ve used personal and server based HSMs for XML and PDF document signing applications, I didn&apos;t know you got them for SSL as well.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628480' story_hnid='2628180' author='latch' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628180">How i became a developer from coal miner?</a>
+    </div>
+      <div class='moreComments button'>2 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628330'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:latch' href='http://news.ycombinator.com/user?id=latch'>latch</a>
+  | about 2 hours ago
+  | <a class='comment external' followee='/reply/2628330' href='/?item=2628330'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">It&apos;s a good story. From a naive distance (the only perspective I have to offer), coal mining is equal parts romantic and disgusting. We can worry all we want about sitting at a desk all day long, but our life expectancy has to be considerably better than a coal miners.</font></div><p>I do wonder if such stories become less likely (more difficult) over time. Ever watch the movie The Aviator? Average movie, but what struck me in that movie was that you had someone who knew nothing/little about planes, learn to fly, build planes and build an empire on them. Try to do that today. The cost of entry, the licensing, the vastness of knowledge..forget about it. You could probably spend your entire life learning about a single little widget.</p><p>Software is crossing that same chasm. Simple "i could have done that" ideas aren&apos;t as frequent as they used to be (although mobile computing has rejuvenated this many times over). Building software is becoming increasingly complicated. You can&apos;t beat facebook without being better than facebook, you can&apos;t build source hosting without beating github. You can&apos;t build a mobile phone without copy and paste (well...at least, you can&apos;t really sell one...).</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628384'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:apsurd' href='http://news.ycombinator.com/user?id=apsurd'>apsurd</a>
+  | about 1 hour ago
+  | <a class='comment external' followee='/reply/2628384' href='/?item=2628384'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">If everyone believed what you are saying then nothing would get built. It&apos;s easy to think creating/inventing things was so much easier <i>back then</i>. Think of how famous I could be if I lived hundreds of years ago. I could easily invent the light bulb, radio, motors, computers. Hell kids today are building these things right! The concepts are so simple, everything was up for grabs back then!</font></div><p>Only they weren&apos;t. As vain as we want to be the truth is we haven&apos;t reached any kind of technological limit. Creating stuff is as hard as it always was. <i>Hard</i>.</p><p>The facebook thing is a bad one. It&apos;s been mentioned time and time again that Zuck could have said the same about myspace...</p><p>Github also a bad one. They are a TINY. Github is awesome, I love them, but they are TINY. I think ruby and javascript are the most popular languages on github. Yet php is the most popular language <i>on the internet</i>. Point being, github is tiny, HN is tiny, Rails is tiny.</p><p>Feel good about all the opportunities that exist out there!</p><p>edited to add:
+For some motivation, here&apos;s what a solo modern inventor can do: <a href="http://en.wikipedia.org/wiki/Dean_Kamen" rel="nofollow">http://en.wikipedia.org/wiki/Dean_Kamen</a></p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:latch' href='http://news.ycombinator.com/user?id=latch'>latch</a>
+  | 11 minutes ago
+  | <a class='comment external' followee='/reply/2628480' href='/?item=2628480'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Do you really believe that for all fields? Or just for software development?</font></div><p>I have to absolutely totally disagree with you if you are talking about all fields. Licensing, regulatory and insurance costs alone prove a significant barrier to entry. I also think that as a field matures, so too does the body of knowledge and the amount of time required to become an expert in said field increases. Look at how much more a doctor, lawyer, or account needs to know today than they did 100 years ago.</p><p>I also think this is unavoidable in software..though I might agree with you that we aren&apos;t there yet? However, whenever I hear someone say "Well, X didn&apos;t have those features either when they shipped", I always cringe)</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628477' story_hnid='2626332' author='ericd' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2626332">Competing with Apple - or "Never mess with your La...</a>
+    </div>
+      <div class='moreComments button'>6 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626560'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:MatthewB' href='http://news.ycombinator.com/user?id=MatthewB'>MatthewB</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626560' href='/?item=2626560'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Apple&apos;s new announcements touched so many startups it&apos;s scary. iMessage takes on all the free/group messaging apps that have been built lately. iCloud takes on (maybe not very well) rdio and other streaming music services. Airdrop takes on dropbox, box.net etc. Reminders takes on rememberthemilk and other GTD services. How about the camera plus app that Apple took off the app store for making the volume button a camera button? Now Apple implemented that feature!</font></div><p>The Paul Graham quote used in this article was spot on, especially the part about "...you may find that you were merely doing market research for them."</p><p>This is the problem with building apps on top of another company&apos;s API. You will forever be subject to their rules. Whether you&apos;re building on Facebook&apos;s API, iOS, or even Amazon AWS...you will always be competing to a disadvantage.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626655'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:fleitz' href='http://news.ycombinator.com/user?id=fleitz'>fleitz</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626655' href='/?item=2626655'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">No if you use the tools correctly then you&apos;ll be a major advantage because it&apos;s a lot easier to use the Facebook / Twitter API than to construct those things yourself. If you&apos;re building a telco probably not a good idea to use someone else&apos;s telco infrastructure, if you&apos;re selling chairs, it&apos;s probably a good idea to buy phone service, rather than construct your own infrastructure.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2626665'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:MatthewB' href='http://news.ycombinator.com/user?id=MatthewB'>MatthewB</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626665' href='/?item=2626665'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Maybe. Here&apos;s a list of apps that are now threatened by iOS 5:</font></div><p><a href="http://bits.blogs.nytimes.com/2011/06/06/which-apps-are-threatened-by-apples-upgrades/" rel="nofollow">http://bits.blogs.nytimes.com/2011/06/06/which-apps-are-thre...</a></p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626741'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:fleitz' href='http://news.ycombinator.com/user?id=fleitz'>fleitz</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626741' href='/?item=2626741'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Does iCloud work on Android? Does it work on a PC? I doubt dropbox and instagram are in any danger because they have barriers to entry that Apple is likely unwilling to take. How many dropbox subscribers are going to go away? Probably not many. Could they lose a bunch of free users? Certainly.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2626778'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:kenjackson' href='http://news.ycombinator.com/user?id=kenjackson'>kenjackson</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626778' href='/?item=2626778'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I don&apos;t have the data, but I wouldn&apos;t be surprised if DropBox had a disproportionately large market of users that were purely on the Apple stack -- and tended to share with other Apple users (when they did share across ppl).</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628402'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:revorad' href='http://news.ycombinator.com/user?id=revorad'>revorad</a>
+  | about 1 hour ago
+  | <a class='comment external' followee='/reply/2628402' href='/?item=2628402'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I highly doubt that. It&apos;ll probably be mostly Windows, a good mix of Windows+Mac, and some Linux.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:ericd' href='http://news.ycombinator.com/user?id=ericd'>ericd</a>
+  | 11 minutes ago
+  | <a class='comment external' followee='/reply/2628477' href='/?item=2628477'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">By disproportionate, I think he meant that there were more Apple-stack Dropbox users than (% of general pop on Apple)*(Total Dropbox Users)</font></div></td>
+
+  </div>
+</div>
+
+
+  <div class='newrequest'></div>
+
+      <div class='holding' style='display:none'></div>
+    </div>
+</div>
+
+<div id='spinner'>
+  <img src='/images/spinner.gif'>
+</div>
+
+  <div class="column view">
+    <h3>My stream</h3>
+    <div id="my_stream">  <div class='item' hnid='2628491' story_hnid='2628175' author='jrockway' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628175">Google +1 Button Performance Review</a>
+    </div>
+      <div class='moreComments button'>1 more comment &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628473'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:andybak' href='http://news.ycombinator.com/user?id=andybak'>andybak</a>
+  | 16 minutes ago
+  | <a class='comment external' followee='/reply/2628473' href='/?item=2628473'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Someone at Google should get a slap upside the head for not getting this spot on.</font></div><p>Google is evangelising performance on one hand and making careless errors on the other...</p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:jrockway' href='http://news.ycombinator.com/user?id=jrockway'>jrockway</a>
+  | 2 minutes ago
+  | <a class='comment external' followee='/reply/2628491' href='/?item=2628491'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#5a5a5a">Yeah, how dare they say the lowest-performing option first in an in-passing comment!  What if the user knows nothing about performance and stops there!  Their page will load 8 milliseconds less quickly!  Amateur hour!11!</font></div><p>(&#60;/sarcasm&#62;)</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628490' story_hnid='2628454' author='tobylane' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628454">Ask HN: bad ideas vs letting creativity flow</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:tobylane' href='http://news.ycombinator.com/user?id=tobylane'>tobylane</a>
+  | 2 minutes ago
+  | <a class='comment external' followee='/reply/2628490' href='/?item=2628490'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">"Reductio ad absurdum". Keep asking about the details till either you no longer think it&apos;s stupid, or they see some downsides to it.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628492' story_hnid='2625605' author='dchest' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625605">Mac OS X Lion: Coming In July For $29</a>
+    </div>
+      <div class='moreComments button'>3 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2625837'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:recoiledsnake' href='http://news.ycombinator.com/user?id=recoiledsnake'>recoiledsnake</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2625837' href='/?item=2625837'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Not sure why below comment is dead. The account seems ok and not hell banned. Was it flagged to death? If so, anyone who flagged it,why?</font></div><p>dsplittgerber 24 minutes ago | link [dead]</p><p>Anyone else surprised by how many hugely popular apps Apple is going to kill with new Lion/iOS? Instapaper built-into Safari now, all kinds of messanger apps killed by iMessage, some of those photo apps going down the drain as well, Reminders app is a huge one as well. All targeting really popular app categories.</p><p>Sure, some people care about thing X being done supremely well and will still pay for some apps. But the huge majority will probably be really fine with Apples version.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2625914'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:ansy' href='http://news.ycombinator.com/user?id=ansy'>ansy</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2625914' href='/?item=2625914'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">This is par for the course with Apple. I remember back in the day there was this super popular shareware app called Aaron that gave System 7 users a System 8 looking theme. Keep in mind this was the dark ages of Apple.</font></div><p>Aaron evolved into Kaleidoscope. A general purpose shareware theme manager that was met with enthusiasm by the Mac community. Kaleidoscope was synonymous with themes on Mac OS.</p><p><a href="http://www.kaleidoscope.net/What_is_Kaleidoscope.html" rel="nofollow">http://www.kaleidoscope.net/What_is_Kaleidoscope.html</a></p><p>By the time OS 8.5 rolled around Apple introduced Appearance Manager. Which was no more than a total rip off of Kaleidoscope. Apple engineers even wrote an internal utility that would convert Kaleidoscope themes into Appearance Manager themes.</p><p><a href="http://en.wikipedia.org/wiki/Appearance_Manager#Kaleidoscope" rel="nofollow">http://en.wikipedia.org/wiki/Appearance_Manager#Kaleidoscope</a></p><p>The shareware author got zero credit. Zero money. He just got ripped off by Apple. In the end, though, Appearance Manager never took off. It was a combination of Kaleidoscope&apos;s momentum and the taint of Appearance Manager that kept theme authors from adopting it.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626727'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:adamta' href='http://news.ycombinator.com/user?id=adamta'>adamta</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626727' href='/?item=2626727'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I remember Konfabulator and Watson (is that what it was called? The one that was ripped off as a new version of Sherlock back when that was still a thing), but I think you&apos;re mistaken about why Appearance Manager never took off. If I remember correctly, Apple just never provided external developers with theme authoring software or documentation for the theme format, because between the original DP period and the public release, they(/Steve) decided that they didn&apos;t particularly <i>want</i> to promote wildly different UI styles. They never even officially released the themes they had demoed, other than Platinum.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:dchest' href='http://news.ycombinator.com/user?id=dchest'>dchest</a>
+  | 2 minutes ago
+  | <a class='comment external' followee='/reply/2628492' href='/?item=2628492'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Watson story: <a href="http://www.karelia.com/news/small_and_nimble_the_long_s.html" rel="nofollow">http://www.karelia.com/news/small_and_nimble_the_long_s.html</a></font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628487' story_hnid='2625860' author='fauigerzigerk' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625860">Apple&apos;s iCloud will automatically store, sync data...</a>
+    </div>
+      <div class='moreComments button'>4 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626392'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:ender7' href='http://news.ycombinator.com/user?id=ender7'>ender7</a>
+  | about 14 hours ago
+  | <a class='comment external' followee='/reply/2626392' href='/?item=2626392'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">In general the service seems really neat, but I have to admit I find their storage and pricing system a bit confusing. How is the average consumer going to react? I can&apos;t imagine explaining this to my parents...</font></div><p>---</p><p>So...it stores all my files?</p><p><i>Yes. Well, sort of. If your apps use the iCloud API.</i></p><p>What?</p><p><i>Nevermind. Yes. It stores your files, and sync them across all your computers.</i></p><p>What does it cost?</p><p><i>It&apos;s free.</i></p><p>Awesome. And I can access them any time?</p><p><i>Yep. Except photos. Those are only stored for 30 days. But the copies stick around on your devices. But only your PCs - your phones only keep the last 1000 photos.</i></p><p>Oh. But what if I want to look at older photos on my--</p><p><i>Put it in an album. Then it&apos;s always available.</i></p><p>Oh...kay. I guess that makes sense. What about music?</p><p><i>If you buy it from the iTunes store, then it syncs automatically to all your devices!</i></p><p>Sweet!</p><p><i>Up to 10 devices.</i></p><p>Eh, that&apos;s fine, that seems like a lot of devices. What if I don&apos;t buy it from the iTunes store?</p><p><i>You can sync that too!</i></p><p>Great!</p><p><i>It costs money though.</i></p><p>Wait. I thought you said it was free.</p><p><i>Non-iTunes Store music costs a yearly fee to store ($24.99). Although you&apos;re not really storing them. See, iTunes will scan your music and try to guess what music you have, and then grant you access to the iTunes Store copies of it. Unless it gets confused and thinks your Bob Dylan is Jimmy Hendricks. But that probably won&apos;t happen.</i></p><p>Er.</p><p><i>But you can "store" an unlimited number of songs!</i></p><p>Unlimited? That&apos;s a lot!</p><p><i>Yeah, you can also store things like mail, documents, and backups on there too!</i></p><p>Are those unlimited too?</p><p><i>No, those have a max of 5GB. Except for Apps, iBooks, and iTunes music. Those don&apos;t count. Oh, and neither do photos. The ones that we store for 30 days.</i></p><p>What happens if I use up all 5GB?</p><p><i>We&apos;re guessing that most people won&apos;t.</i></p><p>You should see my inbox.</p><p><i>We&apos;ll probably have a plan where you can pay more money to get more storage.</i></p><p>Ah, okay. So...</p><p><i>Yes?</i></p><p>It&apos;s free. Unless I want to upload my non-iTunes store music, in which case it&apos;s $24.99/yr. And it has unlimited storage for App backups, iTunes store music, and iBooks, and a 5GB limit for documents, e-mail, and "other stuff", and a 30-day cache of all of the photos I&apos;ve taken. And it happens automatically in the background, provided whatever App I&apos;m using is correctly hooked into the iCloud service, which may or may not be apparent at the time.</p><p><i>Yes.</i></p><p>Ohhhhkay.</p><p>---</p><p>My parents have started to use Dropbox ("put stuff you want in the folder") and really like it. I&apos;m not sure they&apos;ll understand how this service works, if they understand that it exists at all.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626999'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:jimbokun' href='http://news.ycombinator.com/user?id=jimbokun'>jimbokun</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626999' href='/?item=2626999'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Apple is betting that they have chosen those limits such that most of their customers will not bump into them.</font></div><p>Customers legitimately owning more than 10 devices is a problem Apple would love to deal with.</p><p>They are betting that most people only look at the last 1,000 photos they&apos;ve taken on their phone, most of the time.</p><p>They are betting you will use all of the devices where you might want to look at photos within 30 days.</p><p>$25 a year to upload any music and listen to it anywhere, is a pretty simple value proposition.  The free iTunes caveat is more of an edge case, I think.</p><p>5GB...well, yeah, I can see a lot of people hitting that one.  Will be interesting to see if they quietly increase this over time to keep most users under the limit, like Gmail.</p><p>We will see if Apple&apos;s bets turn out to be correct.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628412'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:fauigerzigerk' href='http://news.ycombinator.com/user?id=fauigerzigerk'>fauigerzigerk</a>
+  | about 1 hour ago
+  | <a class='comment external' followee='/reply/2628412' href='/?item=2628412'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">You cannot upload any music. It&apos;s not a deduping technology. If iTunes doesn&apos;t have it or they don&apos;t find it, you can&apos;t use it.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628452'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:rufo' href='http://news.ycombinator.com/user?id=rufo'>rufo</a>
+  | 26 minutes ago
+  | <a class='comment external' followee='/reply/2628452' href='/?item=2628452'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">On the "iTunes in the Cloud" page it pretty clearly states that "All you have to upload is what iTunes can’t match":</font></div><p><a href="http://www.apple.com/icloud/features/" rel="nofollow">http://www.apple.com/icloud/features/</a></p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:fauigerzigerk' href='http://news.ycombinator.com/user?id=fauigerzigerk'>fauigerzigerk</a>
+  | 4 minutes ago
+  | <a class='comment external' followee='/reply/2628487' href='/?item=2628487'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">You&apos;re absolutely right. My bad. Sounds like a useful service in that event.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628483' story_hnid='2627074' author='ordinary' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627074">Demoted</a>
+    </div>
+      <div class='moreComments button'>2 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2627364'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:kenjackson' href='http://news.ycombinator.com/user?id=kenjackson'>kenjackson</a>
+  | about 10 hours ago
+  | <a class='comment external' followee='/reply/2627364' href='/?item=2627364'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Gruber is repeating the obvious, but in a convoluted way.</font></div><p>Apple is about selling HW.  Google is about selling ads.</p><p>That&apos;s it.  Everything else falls from that.</p><p>Google&apos;s goal is to commodotize HW, and I this is, at least theoretically, doable.  Apple can&apos;t really commodotize ads, at least in no way I can think of.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628326'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:Tichy' href='http://news.ycombinator.com/user?id=Tichy'>Tichy</a>
+  | about 2 hours ago
+  | <a class='comment external' followee='/reply/2628326' href='/?item=2628326'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I think Google is more about collecting data. Ads are just a byproduct.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:ordinary' href='http://news.ycombinator.com/user?id=ordinary'>ordinary</a>
+  | 7 minutes ago
+  | <a class='comment external' followee='/reply/2628483' href='/?item=2628483'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I think you&apos;re confusing the end with the means. Collecting data is a method Google uses to be able to sell (more expensive) ads. The data collection is not where the money comes from, the ads are.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628484' story_hnid='2625605' author='AllenKids' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625605">Mac OS X Lion: Coming In July For $29</a>
+    </div>
+      <div class='moreComments button'>7 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2625837'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:recoiledsnake' href='http://news.ycombinator.com/user?id=recoiledsnake'>recoiledsnake</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2625837' href='/?item=2625837'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Not sure why below comment is dead. The account seems ok and not hell banned. Was it flagged to death? If so, anyone who flagged it,why?</font></div><p>dsplittgerber 24 minutes ago | link [dead]</p><p>Anyone else surprised by how many hugely popular apps Apple is going to kill with new Lion/iOS? Instapaper built-into Safari now, all kinds of messanger apps killed by iMessage, some of those photo apps going down the drain as well, Reminders app is a huge one as well. All targeting really popular app categories.</p><p>Sure, some people care about thing X being done supremely well and will still pay for some apps. But the huge majority will probably be really fine with Apples version.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626025'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:erikpukinskis' href='http://news.ycombinator.com/user?id=erikpukinskis'>erikpukinskis</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2626025' href='/?item=2626025'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000"><i>Anyone else surprised by how many hugely popular apps Apple is going to kill with new Lion/iOS?</i></font></div><p>I know, it&apos;ll be like the great Safari massacre all over again, where Apple singlehandedly drove Firefox and Chrome to stop releasing Mac versions. Not to mention the Day When Email Apps&apos; Blood Ran Like Water In The Streets, when everyone stopped using Exchange and Gmail because Apple released Mail.app.</p><p>And don&apos;t even talk to me about what iChat did to Skype. I can&apos;t bear to think of it....</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626131'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:randallsquared' href='http://news.ycombinator.com/user?id=randallsquared'>randallsquared</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2626131' href='/?item=2626131'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Cherrypick, much?  :)  It seems that all your examples are cases where interoperability with or working like the Windows version is the primary required feature.  For years after iTunes, there was no reasonable (GUI) alternative for MP3 playing, at the same time that iTunes was awful if you had a large, diverse collection without ID3 tags.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2626610'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:AllenKids' href='http://news.ycombinator.com/user?id=AllenKids'>AllenKids</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626610' href='/?item=2626610'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">If you have a large diverse collection without ID3 tags you are pretty much fucked anyway. folders is extremely limited in sorting music which leaves you what? playlists?</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2626887'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:randallsquared' href='http://news.ycombinator.com/user?id=randallsquared'>randallsquared</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626887' href='/?item=2626887'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Well, I used folders and filenames for years, from 1998ish through June 2003.  Worked fine; I mostly wanted to listen to entire albums, which mapped well to folders.</font></div><p>Then I got a Mac, and pointed iTunes at my music without backing it up first (because, after all iTunes was an <i>MP3 player</i>, and why would it <i>write</i> to my MP3 collection?!).  Oops.  Later I found that there was some import option I shouldn&apos;t have checked, and iTunes happily moved all my MP3s from their well-sorted folder structure into "Unknown Artist - Unknown Album - Unknown Title".  Yay.</p><p>Even when I eventually got some software that would use a music database to figure out what tracks were, there were a distressing number of tracks that it couldn&apos;t identify (hundreds), and of the ones it could, it mostly did so in a very literal way, such that I have a lot of folders like "Movie Soundtrack - Artist Name" with a single track inside.</p><p>Could I fix all this?  Of course.  Eventually.  Can you tell I&apos;m still, eight years later, extremely angry at iTunes?</p><p>Now I just listen to Pandora.  Screw it.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627057'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:AllenKids' href='http://news.ycombinator.com/user?id=AllenKids'>AllenKids</a>
+  | about 11 hours ago
+  | <a class='comment external' followee='/reply/2627057' href='/?item=2627057'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I agree the default option should be "DO NOT TOUCH"</font></div><p>And about the single track folders, tick "part of a compilation" in info box will do the trick.</p><p>Keep listen to Pandora while it last.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628038'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:crag' href='http://news.ycombinator.com/user?id=crag'>crag</a>
+  | about 4 hours ago
+  | <a class='comment external' followee='/reply/2628038' href='/?item=2628038'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">While it&apos;s lasts? Pandora going someplace?</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:AllenKids' href='http://news.ycombinator.com/user?id=AllenKids'>AllenKids</a>
+  | 6 minutes ago
+  | <a class='comment external' followee='/reply/2628484' href='/?item=2628484'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Space!!!!</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628482' story_hnid='2627074' author='cubicle67' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627074">Demoted</a>
+    </div>
+      <div class='moreComments button'>3 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2627467'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:napierzaza' href='http://news.ycombinator.com/user?id=napierzaza'>napierzaza</a>
+  | about 9 hours ago
+  | <a class='comment external' followee='/reply/2627467' href='/?item=2627467'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">"That’s what we’ll remember about today’s keynote ten years from now."</font></div><p>Classic Gruber. I really hope that no one that I know ever mentions a WWDC presentation from a decade before.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627618'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:matthew-wegner' href='http://news.ycombinator.com/user?id=matthew-wegner'>matthew-wegner</a>
+  | about 8 hours ago
+  | <a class='comment external' followee='/reply/2627618' href='/?item=2627618'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Oh, I don&apos;t know.  The 2001 Macworld keynote that outlines the "digital hub" is still fascinating:</font></div><p><a href="http://www.youtube.com/watch?v=9046oXrm7f8" rel="nofollow">http://www.youtube.com/watch?v=9046oXrm7f8</a></p><p>It&apos;s remarkably prescient in a lot of ways. Take this quote:</p><p><i>Digital cameras now constitute 15% of all cameras sold in the US. 15% percent.  It&apos;ll be 50% in a few years.</i></p><p>He also makes the point that a hub is necessary because of all these various devices can&apos;t talk to the Internet.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627708'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:patrickaljord' href='http://news.ycombinator.com/user?id=patrickaljord'>patrickaljord</a>
+  | about 7 hours ago
+  | <a class='comment external' followee='/reply/2627708' href='/?item=2627708'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">&#62; Digital cameras now constitute 15% of all cameras sold in the US. 15% percent. It&apos;ll be 50% in a few years.</font></div><p>Really? That&apos;s the same thought I had the first time I saw a usable digital camera 10 years ago, and I don&apos;t think I&apos;m special or that I was the only one...</p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:cubicle67' href='http://news.ycombinator.com/user?id=cubicle67'>cubicle67</a>
+  | 7 minutes ago
+  | <a class='comment external' followee='/reply/2628482' href='/?item=2628482'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">go and read photography magazines from that era. There&apos;s was much heated and vehement objection to including articles pertaining to digital photography and cameras. Many photographers at that time were convinced digital cameras were just toys and had no part in &apos;professional&apos; magazines.</font></div><p>of course, some thought the opposite</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628479' story_hnid='2627734' author='arethuza' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627734">RSA finally comes clean: SecurID is compromised</a>
+    </div>
+      <div class='moreComments button'>4 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628031'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:adulau' href='http://news.ycombinator.com/user?id=adulau'>adulau</a>
+  | about 5 hours ago
+  | <a class='comment external' followee='/reply/2628031' href='/?item=2628031'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">There is fundamental issue about those kind of tokens. The customer is not able to renew or set the private key (seed in RSA terms) of their tokens. It&apos;s a kind of insecure business model where the customer has no control over the tokens and is bound to the security of the supplier (if the supplier is compromised...). There are solutions like Yubikey or other compliant HOTP/TOTP tokens where the customer has the control of the private keys inside the token.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628068'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:InclinedPlane' href='http://news.ycombinator.com/user?id=InclinedPlane'>InclinedPlane</a>
+  | about 4 hours ago
+  | <a class='comment external' followee='/reply/2628068' href='/?item=2628068'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Indeed. It&apos;s rather shoddy engineering if you ask me. Consider that, for example, SSL certs are generated and the private key is never disclosed to the cert authority when purchasing a key. That way only the owner of the SSL cert can actually use it.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628199'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:bigiain' href='http://news.ycombinator.com/user?id=bigiain'>bigiain</a>
+  | about 3 hours ago
+  | <a class='comment external' followee='/reply/2628199' href='/?item=2628199'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">"That way only the owner of the SSL cert can actually use it."</font></div><p>Errrmmm, I&apos;m not entirely sure that&apos;s correct - I wonder how many of Sony&apos;s private keys are in scriptkiddies hands right now?</p><p>The webserver needs access to the private key. Anyone who gets root on the webserver can read the private key.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628254'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:joch' href='http://news.ycombinator.com/user?id=joch'>joch</a>
+  | about 2 hours ago
+  | <a class='comment external' followee='/reply/2628254' href='/?item=2628254'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Not entirely sure that&apos;s correct either. One could use a Hardware Security Module, such as the Thales nShield Connect[1], which will keep the private keys secure (at least in theory).</font></div><p>[1] <a href="http://www.thales-esecurity.com/Products/Hardware%20Security%20Modules/nShield%20Connect.aspx" rel="nofollow">http://www.thales-esecurity.com/Products/Hardware%20Security...</a></p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:arethuza' href='http://news.ycombinator.com/user?id=arethuza'>arethuza</a>
+  | 11 minutes ago
+  | <a class='comment external' followee='/reply/2628479' href='/?item=2628479'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Interesting, I&apos;ve used personal and server based HSMs for XML and PDF document signing applications, I didn&apos;t know you got them for SSL as well.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628477' story_hnid='2626332' author='ericd' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2626332">Competing with Apple - or "Never mess with your La...</a>
+    </div>
+      <div class='moreComments button'>6 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626560'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:MatthewB' href='http://news.ycombinator.com/user?id=MatthewB'>MatthewB</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626560' href='/?item=2626560'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Apple&apos;s new announcements touched so many startups it&apos;s scary. iMessage takes on all the free/group messaging apps that have been built lately. iCloud takes on (maybe not very well) rdio and other streaming music services. Airdrop takes on dropbox, box.net etc. Reminders takes on rememberthemilk and other GTD services. How about the camera plus app that Apple took off the app store for making the volume button a camera button? Now Apple implemented that feature!</font></div><p>The Paul Graham quote used in this article was spot on, especially the part about "...you may find that you were merely doing market research for them."</p><p>This is the problem with building apps on top of another company&apos;s API. You will forever be subject to their rules. Whether you&apos;re building on Facebook&apos;s API, iOS, or even Amazon AWS...you will always be competing to a disadvantage.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626655'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:fleitz' href='http://news.ycombinator.com/user?id=fleitz'>fleitz</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626655' href='/?item=2626655'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">No if you use the tools correctly then you&apos;ll be a major advantage because it&apos;s a lot easier to use the Facebook / Twitter API than to construct those things yourself. If you&apos;re building a telco probably not a good idea to use someone else&apos;s telco infrastructure, if you&apos;re selling chairs, it&apos;s probably a good idea to buy phone service, rather than construct your own infrastructure.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2626665'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:MatthewB' href='http://news.ycombinator.com/user?id=MatthewB'>MatthewB</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626665' href='/?item=2626665'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Maybe. Here&apos;s a list of apps that are now threatened by iOS 5:</font></div><p><a href="http://bits.blogs.nytimes.com/2011/06/06/which-apps-are-threatened-by-apples-upgrades/" rel="nofollow">http://bits.blogs.nytimes.com/2011/06/06/which-apps-are-thre...</a></p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626741'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:fleitz' href='http://news.ycombinator.com/user?id=fleitz'>fleitz</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626741' href='/?item=2626741'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Does iCloud work on Android? Does it work on a PC? I doubt dropbox and instagram are in any danger because they have barriers to entry that Apple is likely unwilling to take. How many dropbox subscribers are going to go away? Probably not many. Could they lose a bunch of free users? Certainly.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2626778'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:kenjackson' href='http://news.ycombinator.com/user?id=kenjackson'>kenjackson</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626778' href='/?item=2626778'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I don&apos;t have the data, but I wouldn&apos;t be surprised if DropBox had a disproportionately large market of users that were purely on the Apple stack -- and tended to share with other Apple users (when they did share across ppl).</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628402'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:revorad' href='http://news.ycombinator.com/user?id=revorad'>revorad</a>
+  | about 1 hour ago
+  | <a class='comment external' followee='/reply/2628402' href='/?item=2628402'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I highly doubt that. It&apos;ll probably be mostly Windows, a good mix of Windows+Mac, and some Linux.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:ericd' href='http://news.ycombinator.com/user?id=ericd'>ericd</a>
+  | 11 minutes ago
+  | <a class='comment external' followee='/reply/2628477' href='/?item=2628477'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">By disproportionate, I think he meant that there were more Apple-stack Dropbox users than (% of general pop on Apple)*(Total Dropbox Users)</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628478' story_hnid='2628104' author='po' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628104">Django REST framework with admin-style browseable ...</a>
+    </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:po' href='http://news.ycombinator.com/user?id=po'>po</a>
+  | 11 minutes ago
+  | <a class='comment external' followee='/reply/2628478' href='/?item=2628478'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">The main REST framework options for Django seem to be:</font></div><p>* Piston (<a href="https://bitbucket.org/jespern/django-piston/" rel="nofollow">https://bitbucket.org/jespern/django-piston/</a>)</p><p>* Tastiepie (<a href="http://toastdriven.github.com/django-tastypie/" rel="nofollow">http://toastdriven.github.com/django-tastypie/</a>)</p><p>* django-rest-framework (<a href="http://django-rest-framework.org/" rel="nofollow">http://django-rest-framework.org/</a>)</p><p>* Web Machine (<a href="https://github.com/benoitc/dj-webmachine" rel="nofollow">https://github.com/benoitc/dj-webmachine</a>)</p><p>* Dagny (<a href="https://github.com/zacharyvoase/dagny" rel="nofollow">https://github.com/zacharyvoase/dagny</a>)</p><p>* Roll your own (surprisingly common since it&apos;s not too hard)</p><p>I think it&apos;s great that there are so many options but it&apos;s starting to get bewildering. I think part of the reason for this is how un-restful the default django routing/view technique is. The code samples in the Django documentation don&apos;t exactly start beginners down the right track the way other web frameworks do. You can do it the right way, but it requires a fair amount of discipline.</p><p>I&apos;ve been toying with replacing all of my django routing/views with a framework (or at least a pattern) that encourages more restful design.</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628470' story_hnid='2626332' author='statictype' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2626332">Competing with Apple - or "Never mess with your La...</a>
+    </div>
+      <div class='moreComments button'>4 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626810'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:Tyrannosaurs' href='http://news.ycombinator.com/user?id=Tyrannosaurs'>Tyrannosaurs</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626810' href='/?item=2626810'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Joel Spolsky spoke about this on the SO podcast a while back in terms of people who develop extensions for Visual Studio (though it extends to all IDEs and indeed a lot of software).</font></div><p>He described certain applications as grabbing nickels from the path of an on-coming steamroller. Effectively that is there are things which are going to be added to products eventually and yes there is money to be made by getting their first but accept that it&apos;s inevitable that you&apos;re going to be ploughed down eventually.</p><p>But this isn&apos;t just Apple and it&apos;s not just iOS, it&apos;s software and in particularly operating systems everywhere.</p><p>If your business model is taking what someone else does and doing it just a tiny bit better this comes with the territory. You either need to live with that or keep doing it better so they don&apos;t catch up.</p><p>Marco Arment wrote a piece on how he didn&apos;t care about a rumoured forthcoming addition to iOS despite it competing with Instapaper because he felt he could bring more to it than Apple would and in fact it might bring him new customers by raising awareness of this sort of feature.</p><p>If you&apos;re not thinking that then I&apos;m sorry to say that your product really wasn&apos;t strong enough or different enough in the first place.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627238'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:zmmmmm' href='http://news.ycombinator.com/user?id=zmmmmm'>zmmmmm</a>
+  | about 10 hours ago
+  | <a class='comment external' followee='/reply/2627238' href='/?item=2627238'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">&#62; (or does someone want to tell me that the differences between Windows 1.0 and Windows 7 hasn&apos;t impacted on any developers anywhere?)</font></div><p>Actually I think Microsoft is partly responsible for the sense of self-righteous indignation that developers have when they get displaced.  They deliberately held back on introducing even basic features into Windows for a remarkably long time.   Things like anti-virus, paint programs, text editors, photo management - even opening zip files - were left with token or no support for 5 to 10 years after they were no brainers in terms of expected or useful functionality.   Of course, MS had (and still has, though less so) a regulatory threat to worry about that nobody else does.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628155'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:statictype' href='http://news.ycombinator.com/user?id=statictype'>statictype</a>
+  | about 3 hours ago
+  | <a class='comment external' followee='/reply/2628155' href='/?item=2628155'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Apple steamrolls over 3rd party apps (including implementing features that they <i>rejected</i> another app for including), developers get angry and... this is somehow this is partly Microsoft&apos;s fault. Interesting.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628383'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:Tyrannosaurs' href='http://news.ycombinator.com/user?id=Tyrannosaurs'>Tyrannosaurs</a>
+  | about 1 hour ago
+  | <a class='comment external' followee='/reply/2628383' href='/?item=2628383'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">No, we&apos;re saying that suggesting that this is something that only Apple do is wrong - most large software companies do it.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:statictype' href='http://news.ycombinator.com/user?id=statictype'>statictype</a>
+  | 18 minutes ago
+  | <a class='comment external' followee='/reply/2628470' href='/?item=2628470'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Well, the poster I was replying to was kind of saying the opposite. Implying that Microsoft &apos;spoiled&apos; developers by not implementing those things themselves.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628471' story_hnid='2628082' author='ugh' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628082">3D Printed Bikini</a>
+    </div>
+      <div class='moreComments button'>2 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628094'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:burgerbrain' href='http://news.ycombinator.com/user?id=burgerbrain'>burgerbrain</a>
+  | about 4 hours ago
+  | <a class='comment external' followee='/reply/2628094' href='/?item=2628094'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">There is something disturbingly wrong with how that font is rendering in Firefox 4.  Completely unreadable.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628300'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:Raphael' href='http://news.ycombinator.com/user?id=Raphael'>Raphael</a>
+  | about 2 hours ago
+  | <a class='comment external' followee='/reply/2628300' href='/?item=2628300'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Must be for Mac. OS X makes all text bold.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:ugh' href='http://news.ycombinator.com/user?id=ugh'>ugh</a>
+  | 18 minutes ago
+  | <a class='comment external' followee='/reply/2628471' href='/?item=2628471'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Nope. It looks horrible in Safari. It actually looks better in IE9 since Windows traditionally employs much more aggressive anti-aliasing and hinting (something that’s smaller than one pixel or between pixels simply gets bumped up to one pixel and forced onto the pixel grid).</font></div><p>The font would be alright if our screens had twice or so the pixel density they have today but fonts with features much smaller than one pixel just don’t look good.</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628467' story_hnid='2625860' author='danssig' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625860">Apple&apos;s iCloud will automatically store, sync data...</a>
+    </div>
+      <div class='moreComments button'>4 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626392'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:ender7' href='http://news.ycombinator.com/user?id=ender7'>ender7</a>
+  | about 14 hours ago
+  | <a class='comment external' followee='/reply/2626392' href='/?item=2626392'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">In general the service seems really neat, but I have to admit I find their storage and pricing system a bit confusing. How is the average consumer going to react? I can&apos;t imagine explaining this to my parents...</font></div><p>---</p><p>So...it stores all my files?</p><p><i>Yes. Well, sort of. If your apps use the iCloud API.</i></p><p>What?</p><p><i>Nevermind. Yes. It stores your files, and sync them across all your computers.</i></p><p>What does it cost?</p><p><i>It&apos;s free.</i></p><p>Awesome. And I can access them any time?</p><p><i>Yep. Except photos. Those are only stored for 30 days. But the copies stick around on your devices. But only your PCs - your phones only keep the last 1000 photos.</i></p><p>Oh. But what if I want to look at older photos on my--</p><p><i>Put it in an album. Then it&apos;s always available.</i></p><p>Oh...kay. I guess that makes sense. What about music?</p><p><i>If you buy it from the iTunes store, then it syncs automatically to all your devices!</i></p><p>Sweet!</p><p><i>Up to 10 devices.</i></p><p>Eh, that&apos;s fine, that seems like a lot of devices. What if I don&apos;t buy it from the iTunes store?</p><p><i>You can sync that too!</i></p><p>Great!</p><p><i>It costs money though.</i></p><p>Wait. I thought you said it was free.</p><p><i>Non-iTunes Store music costs a yearly fee to store ($24.99). Although you&apos;re not really storing them. See, iTunes will scan your music and try to guess what music you have, and then grant you access to the iTunes Store copies of it. Unless it gets confused and thinks your Bob Dylan is Jimmy Hendricks. But that probably won&apos;t happen.</i></p><p>Er.</p><p><i>But you can "store" an unlimited number of songs!</i></p><p>Unlimited? That&apos;s a lot!</p><p><i>Yeah, you can also store things like mail, documents, and backups on there too!</i></p><p>Are those unlimited too?</p><p><i>No, those have a max of 5GB. Except for Apps, iBooks, and iTunes music. Those don&apos;t count. Oh, and neither do photos. The ones that we store for 30 days.</i></p><p>What happens if I use up all 5GB?</p><p><i>We&apos;re guessing that most people won&apos;t.</i></p><p>You should see my inbox.</p><p><i>We&apos;ll probably have a plan where you can pay more money to get more storage.</i></p><p>Ah, okay. So...</p><p><i>Yes?</i></p><p>It&apos;s free. Unless I want to upload my non-iTunes store music, in which case it&apos;s $24.99/yr. And it has unlimited storage for App backups, iTunes store music, and iBooks, and a 5GB limit for documents, e-mail, and "other stuff", and a 30-day cache of all of the photos I&apos;ve taken. And it happens automatically in the background, provided whatever App I&apos;m using is correctly hooked into the iCloud service, which may or may not be apparent at the time.</p><p><i>Yes.</i></p><p>Ohhhhkay.</p><p>---</p><p>My parents have started to use Dropbox ("put stuff you want in the folder") and really like it. I&apos;m not sure they&apos;ll understand how this service works, if they understand that it exists at all.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626618'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:GHFigs' href='http://news.ycombinator.com/user?id=GHFigs'>GHFigs</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626618' href='/?item=2626618'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Do your parents use any iOS devices? It sounds like you&apos;re explaining iCloud in excessive detail to someone who has no use for it and doesn&apos;t understand the concept of syncing at all. Someone used to iTunes is not going to be that confused when things that used to require a physical sync can now happen automatically without one.</font></div><p>Many things are transparent to the user, too. For instance, Apple has always had "backups" of your purchases. All they&apos;ve done here is enable you to download them instead of restoring from your own copy. You don&apos;t have to learn or understand anything new for that to be useful.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626977'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:alexfarran' href='http://news.ycombinator.com/user?id=alexfarran'>alexfarran</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626977' href='/?item=2626977'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I don&apos;t think iTunes is that simple to use. It&apos;s very easy to make a mistake and lose all your contacts. I know two people that happened to, and to be honest I cross my fingers and hope when I upgrade my iPhone. Dropbox is very easy to understand in comparison.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2627167'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:klinquist' href='http://news.ycombinator.com/user?id=klinquist'>klinquist</a>
+  | about 11 hours ago
+  | <a class='comment external' followee='/reply/2627167' href='/?item=2627167'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">I recommend that people set up their iDevices to sync (via the exchange protocol) to GMail. Your calendar/contacts will stay there.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:danssig' href='http://news.ycombinator.com/user?id=danssig'>danssig</a>
+  | 19 minutes ago
+  | <a class='comment external' followee='/reply/2628467' href='/?item=2628467'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Then you&apos;re giving Google the ability to wipe your phone.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628456' story_hnid='2627734' author='InclinedPlane' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627734">RSA finally comes clean: SecurID is compromised</a>
+    </div>
+      <div class='moreComments button'>2 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628031'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:adulau' href='http://news.ycombinator.com/user?id=adulau'>adulau</a>
+  | about 5 hours ago
+  | <a class='comment external' followee='/reply/2628031' href='/?item=2628031'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">There is fundamental issue about those kind of tokens. The customer is not able to renew or set the private key (seed in RSA terms) of their tokens. It&apos;s a kind of insecure business model where the customer has no control over the tokens and is bound to the security of the supplier (if the supplier is compromised...). There are solutions like Yubikey or other compliant HOTP/TOTP tokens where the customer has the control of the private keys inside the token.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628181'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:jvdh' href='http://news.ycombinator.com/user?id=jvdh'>jvdh</a>
+  | about 3 hours ago
+  | <a class='comment external' followee='/reply/2628181' href='/?item=2628181'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">True, but the positive fundamental property of these tokens is that it is very very unlikely that someone ever messes with your device without you knowing it. Which prevents a MITM attack.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:InclinedPlane' href='http://news.ycombinator.com/user?id=InclinedPlane'>InclinedPlane</a>
+  | 24 minutes ago
+  | <a class='comment external' followee='/reply/2628456' href='/?item=2628456'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">But as we&apos;ve seen that security is only as good as the security on RSA&apos;s servers. Imagine if someone more sophisticated had (has?) attacked RSA&apos;s servers and avoided RSA becoming aware, how secure would your token be then?</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628457' story_hnid='2625605' author='lloeki' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625605">Mac OS X Lion: Coming In July For $29</a>
+    </div>
+      <div class='moreComments button'>3 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626728'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:callahad' href='http://news.ycombinator.com/user?id=callahad'>callahad</a>
+  | about 13 hours ago
+  | <a class='comment external' followee='/reply/2626728' href='/?item=2626728'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Hallelujah! "OS X Lion [Terminal] includes editable ANSI colors in preferences and support for 256 colors and BCE (background color erase). The default TERM value is xterm-256color."</font></div><p>Cite: <a href="http://www.apple.com/macosx/whats-new/features.html#unix" rel="nofollow">http://www.apple.com/macosx/whats-new/features.html#unix</a></p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627092'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:dreamux' href='http://news.ycombinator.com/user?id=dreamux'>dreamux</a>
+  | about 11 hours ago
+  | <a class='comment external' followee='/reply/2627092' href='/?item=2627092'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Full-screen terminal is [sadly] the only feature I really want in this update.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2627340'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:fredoliveira' href='http://news.ycombinator.com/user?id=fredoliveira'>fredoliveira</a>
+  | about 10 hours ago
+  | <a class='comment external' followee='/reply/2627340' href='/?item=2627340'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">No love for command+tab number? That alone made me move to iTerm 2.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:lloeki' href='http://news.ycombinator.com/user?id=lloeki'>lloeki</a>
+  | 24 minutes ago
+  | <a class='comment external' followee='/reply/2628457' href='/?item=2628457'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">The one feature that made me move to iTerm 2 is separate settings for left/right alt keys (resp. meta/system alt). Essential on a French keyboard, where &apos;|&apos; is alt+shift+L and &apos;~&apos; is alt+N, while keeping meta alive.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628458' story_hnid='2628104' author='cdavid' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2628104">Django REST framework with admin-style browseable ...</a>
+    </div>
+      <div class='moreComments button'>1 more comment &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628431'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:rams' href='http://news.ycombinator.com/user?id=rams'>rams</a>
+  | 38 minutes ago
+  | <a class='comment external' followee='/reply/2628431' href='/?item=2628431'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Do not believe any programmer, manager, or salesperson who claims that code can be self-documenting or automatically documented. It ain&apos;t so. Good documentation includes background and decision information that cannot be derived from the code.
+- Jef Raskin on self-documenting code</font></div><p><a href="http://queue.acm.org/detail.cfm?id=1053354" rel="nofollow">http://queue.acm.org/detail.cfm?id=1053354</a></p><p>The project page itself says &apos;self-describing&apos;</p></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:cdavid' href='http://news.ycombinator.com/user?id=cdavid'>cdavid</a>
+  | 24 minutes ago
+  | <a class='comment external' followee='/reply/2628458' href='/?item=2628458'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">You need both (jacob Kaplan-Moss explained this pretty well: <a href="http://jacobian.org/writing/great-documentation/what-to-write" rel="nofollow">http://jacobian.org/writing/great-documentation/what-to-writ...</a>)</font></div><p>I find this kind of features is quite interesting, because API-doc is useful when you need a precise information ("I know there is a function for this, but what&apos;s the args order again ?"). When the only doc for a new project I am interested in is javadoc/doxygen, I usually run away.</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628452' story_hnid='2625860' author='rufo' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625860">Apple&apos;s iCloud will automatically store, sync data...</a>
+    </div>
+      <div class='moreComments button'>3 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626392'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:ender7' href='http://news.ycombinator.com/user?id=ender7'>ender7</a>
+  | about 14 hours ago
+  | <a class='comment external' followee='/reply/2626392' href='/?item=2626392'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">In general the service seems really neat, but I have to admit I find their storage and pricing system a bit confusing. How is the average consumer going to react? I can&apos;t imagine explaining this to my parents...</font></div><p>---</p><p>So...it stores all my files?</p><p><i>Yes. Well, sort of. If your apps use the iCloud API.</i></p><p>What?</p><p><i>Nevermind. Yes. It stores your files, and sync them across all your computers.</i></p><p>What does it cost?</p><p><i>It&apos;s free.</i></p><p>Awesome. And I can access them any time?</p><p><i>Yep. Except photos. Those are only stored for 30 days. But the copies stick around on your devices. But only your PCs - your phones only keep the last 1000 photos.</i></p><p>Oh. But what if I want to look at older photos on my--</p><p><i>Put it in an album. Then it&apos;s always available.</i></p><p>Oh...kay. I guess that makes sense. What about music?</p><p><i>If you buy it from the iTunes store, then it syncs automatically to all your devices!</i></p><p>Sweet!</p><p><i>Up to 10 devices.</i></p><p>Eh, that&apos;s fine, that seems like a lot of devices. What if I don&apos;t buy it from the iTunes store?</p><p><i>You can sync that too!</i></p><p>Great!</p><p><i>It costs money though.</i></p><p>Wait. I thought you said it was free.</p><p><i>Non-iTunes Store music costs a yearly fee to store ($24.99). Although you&apos;re not really storing them. See, iTunes will scan your music and try to guess what music you have, and then grant you access to the iTunes Store copies of it. Unless it gets confused and thinks your Bob Dylan is Jimmy Hendricks. But that probably won&apos;t happen.</i></p><p>Er.</p><p><i>But you can "store" an unlimited number of songs!</i></p><p>Unlimited? That&apos;s a lot!</p><p><i>Yeah, you can also store things like mail, documents, and backups on there too!</i></p><p>Are those unlimited too?</p><p><i>No, those have a max of 5GB. Except for Apps, iBooks, and iTunes music. Those don&apos;t count. Oh, and neither do photos. The ones that we store for 30 days.</i></p><p>What happens if I use up all 5GB?</p><p><i>We&apos;re guessing that most people won&apos;t.</i></p><p>You should see my inbox.</p><p><i>We&apos;ll probably have a plan where you can pay more money to get more storage.</i></p><p>Ah, okay. So...</p><p><i>Yes?</i></p><p>It&apos;s free. Unless I want to upload my non-iTunes store music, in which case it&apos;s $24.99/yr. And it has unlimited storage for App backups, iTunes store music, and iBooks, and a 5GB limit for documents, e-mail, and "other stuff", and a 30-day cache of all of the photos I&apos;ve taken. And it happens automatically in the background, provided whatever App I&apos;m using is correctly hooked into the iCloud service, which may or may not be apparent at the time.</p><p><i>Yes.</i></p><p>Ohhhhkay.</p><p>---</p><p>My parents have started to use Dropbox ("put stuff you want in the folder") and really like it. I&apos;m not sure they&apos;ll understand how this service works, if they understand that it exists at all.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626999'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:jimbokun' href='http://news.ycombinator.com/user?id=jimbokun'>jimbokun</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626999' href='/?item=2626999'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Apple is betting that they have chosen those limits such that most of their customers will not bump into them.</font></div><p>Customers legitimately owning more than 10 devices is a problem Apple would love to deal with.</p><p>They are betting that most people only look at the last 1,000 photos they&apos;ve taken on their phone, most of the time.</p><p>They are betting you will use all of the devices where you might want to look at photos within 30 days.</p><p>$25 a year to upload any music and listen to it anywhere, is a pretty simple value proposition.  The free iTunes caveat is more of an edge case, I think.</p><p>5GB...well, yeah, I can see a lot of people hitting that one.  Will be interesting to see if they quietly increase this over time to keep most users under the limit, like Gmail.</p><p>We will see if Apple&apos;s bets turn out to be correct.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628412'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:fauigerzigerk' href='http://news.ycombinator.com/user?id=fauigerzigerk'>fauigerzigerk</a>
+  | about 1 hour ago
+  | <a class='comment external' followee='/reply/2628412' href='/?item=2628412'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">You cannot upload any music. It&apos;s not a deduping technology. If iTunes doesn&apos;t have it or they don&apos;t find it, you can&apos;t use it.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:rufo' href='http://news.ycombinator.com/user?id=rufo'>rufo</a>
+  | 26 minutes ago
+  | <a class='comment external' followee='/reply/2628452' href='/?item=2628452'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">On the "iTunes in the Cloud" page it pretty clearly states that "All you have to upload is what iTunes can’t match":</font></div><p><a href="http://www.apple.com/icloud/features/" rel="nofollow">http://www.apple.com/icloud/features/</a></p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628449' story_hnid='2627582' author='jrockway' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2627582">Netflix To Come To Linux Via HTML5</a>
+    </div>
+      <div class='moreComments button'>3 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2628315'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:jrockway' href='http://news.ycombinator.com/user?id=jrockway'>jrockway</a>
+  | about 2 hours ago
+  | <a class='comment external' followee='/reply/2628315' href='/?item=2628315'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">What&apos;s the point of DRM when I can just connect gdb to this process and suck the video right out of memory after it&apos;s been encrypted?  Or, what&apos;s the point of DRM when I can just write my own video driver?</font></div><p>Wait, what&apos;s the point of DRM again?  I can already get every movie ever made for free in HD on the Internet.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628355'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:jbk' href='http://news.ycombinator.com/user?id=jbk'>jbk</a>
+  | about 1 hour ago
+  | <a class='comment external' followee='/reply/2628355' href='/?item=2628355'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Exactly. The important part is on the "video driver" part.</font></div><p>People have asked us to implement DRM in VLC since a long time, over and over. At the end it is impossible, because when an code interface is know, you can always switch one part and dump the stream; the part being a filter, a video renderer or just a video driver.</p><p>This is why HDCP was implemented (and failed, btw) to have a chain of trust.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2628425'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:yid' href='http://news.ycombinator.com/user?id=yid'>yid</a>
+  | 41 minutes ago
+  | <a class='comment external' followee='/reply/2628425' href='/?item=2628425'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Right, but the lower down in the stack they go, the more they deter the "casual" hacker. I think they want to bring down the sheer number of pirates to a level where the vast majority of media won&apos;t be pirated.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:jrockway' href='http://news.ycombinator.com/user?id=jrockway'>jrockway</a>
+  | 28 minutes ago
+  | <a class='comment external' followee='/reply/2628449' href='/?item=2628449'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">This doesn&apos;t make sense, though.  You can just share your account credentials and activate your friends&apos; TVs.  Then they can watch all the video they want.</font></div><p>Similarly, people don&apos;t pirate movies by having a close friend rip Netflix streams.  They go on The Pirate Bay and download the torrent.  Preventing piracy means you need to prevent people from ripping the disks or streams in the first place... but the people who do that aren&apos;t "casual hackers", they are as hardcore as priates get.  And if just one person figures out how to do it, it&apos;s broken forever.  (I assume there are plenty of programs available to rip Blu-Ray disks now, since the key for each disk is known and publicly available.  It only takes one person to do that, and then the DRM is nothing but a waste of CPU cycles and engineering talent.)</p></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628451' story_hnid='2626332' author='AllenKids' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2626332">Competing with Apple - or "Never mess with your La...</a>
+    </div>
+      <div class='moreComments button'>4 more comments &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626810'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:Tyrannosaurs' href='http://news.ycombinator.com/user?id=Tyrannosaurs'>Tyrannosaurs</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626810' href='/?item=2626810'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Joel Spolsky spoke about this on the SO podcast a while back in terms of people who develop extensions for Visual Studio (though it extends to all IDEs and indeed a lot of software).</font></div><p>He described certain applications as grabbing nickels from the path of an on-coming steamroller. Effectively that is there are things which are going to be added to products eventually and yes there is money to be made by getting their first but accept that it&apos;s inevitable that you&apos;re going to be ploughed down eventually.</p><p>But this isn&apos;t just Apple and it&apos;s not just iOS, it&apos;s software and in particularly operating systems everywhere.</p><p>If your business model is taking what someone else does and doing it just a tiny bit better this comes with the territory. You either need to live with that or keep doing it better so they don&apos;t catch up.</p><p>Marco Arment wrote a piece on how he didn&apos;t care about a rumoured forthcoming addition to iOS despite it competing with Instapaper because he felt he could bring more to it than Apple would and in fact it might bring him new customers by raising awareness of this sort of feature.</p><p>If you&apos;re not thinking that then I&apos;m sorry to say that your product really wasn&apos;t strong enough or different enough in the first place.</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2626876'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:pyre' href='http://news.ycombinator.com/user?id=pyre'>pyre</a>
+  | about 12 hours ago
+  | <a class='comment external' followee='/reply/2626876' href='/?item=2626876'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000"></font></div><p><pre><code>  &#62; because he felt he could bring more to it
+  &#62; than Apple would
+</code></pre>
+Until his next update is rejected because it duplicates functionality that iOS already provides and would &apos;confuse&apos; consumers (so could you please stop attempting to compete with us, please?).</p></td>
+
+          </div>
+          <div class='ancestor' hnid='2627273'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:skimbrel' href='http://news.ycombinator.com/user?id=skimbrel'>skimbrel</a>
+  | about 10 hours ago
+  | <a class='comment external' followee='/reply/2627273' href='/?item=2627273'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">It&apos;s been pointed out on the other thread, but this tends to happen when iOS had the functionality first, not the other way round. Apple allows plenty of camera apps and other such "duplicated functionality" to remain in the app store.</font></div></td>
+
+          </div>
+          <div class='ancestor' hnid='2628024'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:pyre' href='http://news.ycombinator.com/user?id=pyre'>pyre</a>
+  | about 5 hours ago
+  | <a class='comment external' followee='/reply/2628024' href='/?item=2628024'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">That may be, but it becomes something of an &apos;unenforced law,&apos; which is something that I&apos;m not very fond about. If the terms of service allow them to boot that App at any time (but for the time-being they are going with an interpretation that is favorable to you), then you are still on shaky ground.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:AllenKids' href='http://news.ycombinator.com/user?id=AllenKids'>AllenKids</a>
+  | 28 minutes ago
+  | <a class='comment external' followee='/reply/2628451' href='/?item=2628451'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">In theory Apple can reject any app it deems unfit for iOS without further explanation. So can any door keeper for that matter.</font></div></td>
+
+  </div>
+</div>
+
+  <div class='item' hnid='2628447' story_hnid='2625605' author='tudorizer' style='display:none'>
+  <div class='contextbox'>
+    <div class='title internal story'>
+      <a href="http://news.ycombinator.com/item?id=2625605">Mac OS X Lion: Coming In July For $29</a>
+    </div>
+      <div class='moreComments button'>1 more comment &nbsp;&darr;</div>
+      <div class='context'>
+          <div class='ancestor' hnid='2626021'>
+            <div class='comhead'>
+  by <a class='author internal' followee='user:rythie' href='http://news.ycombinator.com/user?id=rythie'>rythie</a>
+  | about 15 hours ago
+  | <a class='comment external' followee='/reply/2626021' href='/?item=2626021'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">Title is misleading, $29.99 to zero decimal places is $30 not $29.</font></div></td>
+
+          </div>
+      </div>
+  </div>
+
+  <div class='itembox'%>
+    <div class='comhead'>
+  by <a class='author internal' followee='user:tudorizer' href='http://news.ycombinator.com/user?id=tudorizer'>tudorizer</a>
+  | 29 minutes ago
+  | <a class='comment external' followee='/reply/2628447' href='/?item=2628447'>reply</a>
+</div>
+
+<td class="default">
+<div class="comment"><font color="#000000">That&apos;s how our whole consumer culture is tricked :)</font></div></td>
+
+  </div>
+</div>
+
+
+  <div class='newrequest'></div>
+
+      <div class='holding' style='display:none'></div>
+    </div>
+  </div>
+
+
+<script>
+    mostRecentItem = 2628496;
+  shortlist = ["pg","tptacek","patio11","edw519","jacquesm","fogus","cwan","jrockway","swombat","icey","raganwald","vaksel","tobylane","jbk","2627817","2628104","2627734","2627602","2628082","2627582","2627074","2626332","2625860","2625605"];
+$('.item[hnid='+0+']').addClass('shortlist');
+
+</script>
+
+  </body>
+</html>
 
 <p>@Twitter</p>
 
