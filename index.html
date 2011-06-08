@@ -162,17 +162,15 @@ google.friendconnect.container.renderMembersGadget(
 
 <div class="footer">
 
-<iframe src="http://www.facebook.com/plugins/registration.php?
-             client_id=204768329564823
-             redirect_uri=http%3A%2F%2sameerg.github.com%2Ftools%2Fecho%2F&
-             fields=name,gender"
-        scrolling="auto"
-        frameborder="no"
-        style="border:none"
-        allowTransparency="true"
-        width="100%"
-        height="400">
-</iframe>
+<div id="fb-root"></div>
+<script src="http://connect.facebook.net/en_US/all.js#appId={YOUR_APP_ID}&xfbml=1"></script>
+
+<fb:registration 
+  fields="name,birthday,gender,location,email" 
+  redirect-uri="http://developers.facebook.com/tools/echo/"
+  width="830">
+</fb:registration>
+
 
     </div>
 
